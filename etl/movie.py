@@ -50,11 +50,11 @@ class Movie:
 
 		# download video
 		y.streams.filter(subtype='mp4').first()\
-			.download(output_path=VIDEOS_PATH, filename=self.video_id)
+			.download(output_path=VIDEOS_PATH, filename=self.imdb_id)
 
 		# fetch caption
 		caption = y.captions.get_by_language_code('en').generate_srt_captions()
-		with open(CAPTIONS_PATH + "/{}.txt".format(self.video_id), 'w') as f:
+		with open(CAPTIONS_PATH + "/{}.txt".format(self.imdb_id), 'w') as f:
 			f.write(caption)
 
 	def __str__(self):
