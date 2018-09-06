@@ -9,16 +9,14 @@ VIDEOS_PATH = "../data/videos"
 CAPTIONS_PATH = "../data/captions"
 
 class Movie:
-	def __init__(self, name):
+	def __init__(self, name, imdb_id):
 		# First tier features, from IMDB
 		self.name = name
+		self.imdb_id = imdb_id # primary key
 		self.imdb_features = {}
-		self.imdb_id = None
-		self.year = None
-		self.genre = None
 
 		# Second tier features, from YouTube
-		self.video_id = "ue80QwXMRHg" #self._get_video_id()
+		self.video_id = self._get_video_id()
 
 
 	"""
@@ -60,9 +58,4 @@ class Movie:
 			f.write(caption)
 
 	def __str__(self):
-		return "{}\t{}\t{}\t{}".format(self.name, self.video_id, self.year, self.genre)
-
-
-m = Movie("thor ragnarok")
-m.download()
-
+		return "{}\t{}\t{}\t{}".format(self.name, self.imdb_id, self.video_id, self.imdb_features)

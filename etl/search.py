@@ -1,21 +1,33 @@
 import requests
 from bs4 import BeautifulSoup 
+import pickle, os.path
 
 from movie import Movie
 
-from collections import defaultdict
+KEYVALUE_STORE_PATH = "../data/keyvalue.pkl"
 
+def load_keyvalue_store():
+	if os.path.exists(KEYVALUE_STORE_PATH):
+		with open(KEYVALUE_STORE_PATH, 'rb') as f:
+			movies = pickle.load(f)
+	else:
+		movies = {}
+	return movies # imdb_id -> movie object
 
+def save_movies(movies):
+	with open(KEYVALUE_STORE_PATH, 'wb') as f:
+		pickle.dump(movies, f, pickle.HIGHEST_PROTOCOL)
 
 """
 Given a movie's imdb_id, determine if it's good for our project.
-Returns: boolean
+If yes, insert into our movies key-value store.
+Return: boolean
 Logic: 
-- must be English
-- is not Animation
+- is not an animation
+- must be in English
 - votes >= 250,000
 """
-def this_movie_ok(imdb_id):
+def insert_if_ok(movies, name, imdb_id):
 	imdb_url = "https://www.imdb.com/title/" + imdb_id
 
 	response = requests.get(imdb_url)
@@ -29,10 +41,30 @@ def this_movie_ok(imdb_id):
 	genres = []
 	for line in html.find("div", class_="subtext").find_all("a")[:-1]:
 		genres.append(line.contents[0])
-	print(genres)
+	if "Animation" in set(genres):
+		return False
 
-def get_movies_from_imdb():
-	movies = defaultdict(list) # year -> a list of movie objects
+	# get language
+	languages = []
+	for line in list(html.find("div", id="titleDetails").children)[9].find_all('a'):
+		languages.append(line.contents[0])
+	if "English" not in languages:
+		return False
+
+	# get number of votes
+	count = int(html.find("div", class_="imdbRating").find('a').find("span")\
+			.contents[0].replace(',', ''))
+	if count < 250000:
+		return False
+
+	if imdb_id not in movies:
+		movies[imdb_id] = Movie(name, imdb_id)
+		movies[imdb_id].imdb_features['genre'] = genres
+
+	return True
+
+
+def get_movies_from_imdb(movies):
 
 	for year in range(2000, 2001):
 		# 1. get most featured movies in this year from imdb
@@ -48,10 +80,18 @@ def get_movies_from_imdb():
 		for line in html.find_all("h3", class_="lister-item-header")[:20]:
 			name, imdb_suburl = line.find('a').contents[0], line.find('a')['href']
 			imdb_id = imdb_suburl.split('/')[2]
-			print(name, imdb_id)
+
+			print("Movie {}...".format(name), end="")
+			
+			if insert_if_ok(movies, name, imdb_id):
+				movies[imdb_id].imdb_features['year'] = year
+				print("stored.")
+			else:
+				print("skipped.")
 
 if __name__ == "__main__":
-	this_movie_ok("tt0468569")
-	#get_movies_from_imdb()
+	movies = load_keyvalue_store()
+	get_movies_from_imdb(movies)
+	save_movies(movies)
 
 
