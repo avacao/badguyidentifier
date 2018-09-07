@@ -40,14 +40,14 @@ def insert_if_ok(movies, name, imdb_id):
 	# get genres
 	genres = []
 	for line in html.find("div", class_="subtext").find_all("a")[:-1]:
-		genres.append(line.contents[0])
+		genres.append(str(line.contents[0]))
 	if "Animation" in set(genres):
 		return False
 
 	# get language
 	languages = []
 	for line in list(html.find("div", id="titleDetails").children)[9].find_all('a'):
-		languages.append(line.contents[0])
+		languages.append(str(line.contents[0]))
 	if "English" not in languages:
 		return False
 
@@ -66,7 +66,7 @@ def insert_if_ok(movies, name, imdb_id):
 
 def get_movies_from_imdb(movies):
 
-	for year in range(2000, 2001):
+	for year in range(2002, 2018):
 		# 1. get most featured movies in this year from imdb
 		imdb_list_url = "https://www.imdb.com/search/title?year={}&title_type=feature&".format(year)
 
@@ -78,7 +78,7 @@ def get_movies_from_imdb(movies):
 		# 2. parse html response, get each movie
 		html = BeautifulSoup(response.content, 'html.parser')
 		for line in html.find_all("h3", class_="lister-item-header")[:20]:
-			name, imdb_suburl = line.find('a').contents[0], line.find('a')['href']
+			name, imdb_suburl = str(line.find('a').contents[0]), line.find('a')['href']
 			imdb_id = imdb_suburl.split('/')[2]
 
 			print("Movie {}...".format(name), end="")
