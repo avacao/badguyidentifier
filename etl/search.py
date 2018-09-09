@@ -89,9 +89,17 @@ def get_movies_from_imdb(movies):
 			else:
 				print("skipped.")
 
+def download_movies(movies):
+	#for movie in movies.values():
+	for movie in [movies['tt0264464'], movies["tt1843866"]]:
+		movie_path = "../data/videos/" + movie.imdb_id + ".mp4"
+		if not os.path.isfile(movie_path):
+			movie.download()
+
 if __name__ == "__main__":
 	movies = load_keyvalue_store()
-	get_movies_from_imdb(movies)
-	save_movies(movies)
+	# get_movies_from_imdb(movies)
+	# save_movies(movies)
 
+	download_movies(movies)
 

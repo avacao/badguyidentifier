@@ -44,6 +44,8 @@ class Movie:
 	Use video_id to download video and its caption from YouTuBe.
 	"""
 	def download(self):
+		print("Downloading video and caption for {}...".format(self.name), end='')
+
 		url = "https://www.youtube.com/watch?v=" + self.video_id
 
 		y = YouTube(url)
@@ -53,9 +55,15 @@ class Movie:
 			.download(output_path=VIDEOS_PATH, filename=self.imdb_id)
 
 		# fetch caption
-		caption = y.captions.get_by_language_code('en').generate_srt_captions()
+		try:
+			caption = y.captions.get_by_language_code('en').generate_srt_captions()
+		except AttributeError: # this video comes without a caption
+			caption = ""
+
 		with open(CAPTIONS_PATH + "/{}.txt".format(self.imdb_id), 'w') as f:
 			f.write(caption)
+
+		print(" Done.")
 
 	def __str__(self):
 		return "{}\t{}\t{}\t{}".format(self.name, self.imdb_id, self.video_id, self.imdb_features)
