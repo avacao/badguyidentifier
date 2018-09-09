@@ -90,8 +90,7 @@ def get_movies_from_imdb(movies):
 				print("skipped.")
 
 def download_movies(movies):
-	#for movie in movies.values():
-	for movie in [movies['tt0264464'], movies["tt1843866"]]:
+	for movie in movies.values():
 		movie_path = "../data/videos/" + movie.imdb_id + ".mp4"
 		if not os.path.isfile(movie_path):
 			movie.download()
