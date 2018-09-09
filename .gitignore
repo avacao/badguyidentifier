@@ -1,3 +1,4 @@
 credentials.py
+venv
 *.pyc
 !/.gitignore
