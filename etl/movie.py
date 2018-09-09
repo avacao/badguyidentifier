@@ -46,24 +46,27 @@ class Movie:
 	def download(self):
 		print("Downloading video and caption for {}...".format(self.name), end='')
 
-		url = "https://www.youtube.com/watch?v=" + self.video_id
-
-		y = YouTube(url)
-
-		# download video
-		y.streams.filter(subtype='mp4').first()\
-			.download(output_path=VIDEOS_PATH, filename=self.imdb_id)
-
-		# fetch caption
 		try:
-			caption = y.captions.get_by_language_code('en').generate_srt_captions()
-		except AttributeError: # this video comes without a caption
-			caption = ""
+			url = "https://www.youtube.com/watch?v=" + self.video_id
 
-		with open(CAPTIONS_PATH + "/{}.txt".format(self.imdb_id), 'w') as f:
-			f.write(caption)
+			y = YouTube(url)
 
-		print(" Done.")
+			# download video
+			y.streams.filter(subtype='mp4').first()\
+				.download(output_path=VIDEOS_PATH, filename=self.imdb_id)
+
+			# fetch caption
+			try:
+				caption = y.captions.get_by_language_code('en').generate_srt_captions()
+			except AttributeError: # this video comes without a caption
+				caption = ""
+
+			with open(CAPTIONS_PATH + "/{}.txt".format(self.imdb_id), 'w') as f:
+				f.write(caption)
+
+			print(" Done.")
+		except Exception, e:
+			print(" Failed. \n{}".format(str(e)))
 
 	def __str__(self):
 		return "{}\t{}\t{}\t{}".format(self.name, self.imdb_id, self.video_id, self.imdb_features)
