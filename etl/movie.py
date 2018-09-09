@@ -65,7 +65,7 @@ class Movie:
 				f.write(caption)
 
 			print(" Done.")
-		except Exception, e:
+		except Exception as e:
 			print(" Failed. \n{}".format(str(e)))
 
 	def __str__(self):
