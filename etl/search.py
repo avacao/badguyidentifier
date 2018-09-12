@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup 
 import pickle, os.path
+import commons
 
 from movie import Movie
 
@@ -101,4 +102,5 @@ if __name__ == "__main__":
 	# save_movies(movies)
 
 	download_movies(movies)
+
 

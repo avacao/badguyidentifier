@@ -4,5 +4,7 @@ venv
 data
 
 *.pyc
+*.avi
+*.mp4 
 
 !/.gitignore
