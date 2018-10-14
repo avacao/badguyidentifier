@@ -4,13 +4,13 @@ Face identification and comparison in videos
 
 import commons
 import face_recognition
-import cv2
+import cv2, os
 
 FACE_FILTER_AREA_RATIO_LOWER_BOUND = 1.0 / 160
 FACE_FILTER_AREA_GROUP_RATIO_LOWER_BOUND = 1.0 / 80
 FACE_SCALE = 1.3
 
-def face_visualization():
+def visualization():
 	input_movie = cv2.VideoCapture(commons.get_video_path("tt3501632"))
 	frames_count = int(input_movie.get(cv2.CAP_PROP_FRAME_COUNT))
 
@@ -33,8 +33,10 @@ def face_visualization():
 
 		for top, right, bottom, left in face_locations:
 			cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
-		print("Writing frame {} / {}".format(frame_number, frames_count))
+		print("Writing frame {} / {}".format(frame_number, frames_count), end="\r")
 		output_movie.write(frame)
+
+	print()
 
 	input_movie.release()
 	output_movie.release()
@@ -70,12 +72,17 @@ def scale_face_rectangle(top, right, bottom, left, height, width):
 	return top, right, bottom, left
 
 def save_faces(movies):
-	for imdb_id in ["tt3501632"]:
+	for imdb_id in ["tt1843866", "tt3501632", "tt0264464"]:
 	#for imdb_id in movies:
 		movie = movies[imdb_id]
 
 		input_movie = cv2.VideoCapture(commons.get_video_path(imdb_id))
 		face_dir = commons.get_faces_dir(imdb_id)
+
+		# check if this movie has already been face recognized
+		if os.path.exists(face_dir) and os.path.exists(os.path.join(face_dir, '_SUCCESS')):
+			print("movie {} has faces saved".format(movie.name))
+			continue # skip this movie
 
 		frame_count = input_movie.get(cv2.CAP_PROP_FRAME_COUNT)
 		height = int(input_movie.get(cv2.CAP_PROP_FRAME_HEIGHT))
@@ -112,8 +119,13 @@ def save_faces(movies):
 			print("At frame {} / {} ...".format(i, frame_count),end="\r")
 
 		print(" Done.")
+		open(os.path.join(face_dir, '_SUCCESS'), "a").close() # mark success
 		input_movie.release()
 		cv2.destroyAllWindows()
+
+
+def face_clustering(movies):
+	pass
 
 if __name__ == '__main__':
 	movies = commons.load_movies()
