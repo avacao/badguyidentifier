@@ -72,8 +72,8 @@ def scale_face_rectangle(top, right, bottom, left, height, width):
 	return top, right, bottom, left
 
 def save_faces(movies):
-	for imdb_id in ["tt1843866", "tt3501632", "tt0264464"]:
-	#for imdb_id in movies:
+	#for imdb_id in ["tt1843866", "tt3501632", "tt0264464"]:
+	for imdb_id in movies:
 		movie = movies[imdb_id]
 
 		input_movie = cv2.VideoCapture(commons.get_video_path(imdb_id))
@@ -83,6 +83,7 @@ def save_faces(movies):
 		if os.path.exists(face_dir) and os.path.exists(os.path.join(face_dir, '_SUCCESS')):
 			print("movie {} has faces saved".format(movie.name))
 			continue # skip this movie
+		print("movie {}: ".format(movie.name))
 
 		frame_count = input_movie.get(cv2.CAP_PROP_FRAME_COUNT)
 		height = int(input_movie.get(cv2.CAP_PROP_FRAME_HEIGHT))
