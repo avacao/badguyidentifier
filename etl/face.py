@@ -4,7 +4,7 @@ Face identification and comparison in videos
 
 import commons
 import face_recognition
-import cv2, os
+import cv2, os, sys
 
 FACE_FILTER_AREA_RATIO_LOWER_BOUND = 1.0 / 160
 FACE_FILTER_AREA_GROUP_RATIO_LOWER_BOUND = 1.0 / 80
@@ -123,10 +123,92 @@ def save_faces(movies):
 		input_movie.release()
 		cv2.destroyAllWindows()
 
-
+"""
+Using extracted faces in folder, identify main characters and re-ID
+"""
 def face_clustering(movies):
-	pass
+	for imdb_id in ["tt3501632"]:
+		movie = movies[imdb_id]
+		face_dir = commons.get_faces_dir(imdb_id)
+
+		# check if face detection has succeeded
+		if not os.path.exists(os.path.join(face_dir, '_SUCCESS')):
+			sys.stderr.write("ERROR: movie {} - {} face not extracted.".format(imdb_id, movie.name))
+			sys.stderr.flush()
+			continue
+
+		# open all faces
+		# NOTE: maybe keep file sequence to use heuistics?
+		faces = {} # integer of filename -> face image
+		for file in os.listdir(face_dir):
+			filename, extension = os.path.splitext(file)
+			if extension == ".jpg":
+				faces[int(filename)] = face_recognition.load_image_file(os.path.join(face_dir, file))
+
+
+		# re-ID
+		"""
+		Given a list of T/F results (current face against a list of known faces),
+		determine whether they belong to the same person
+		"""
+		def is_same_person(result):
+			true_count = len(list(filter(lambda x: x, result)))
+			return true_count >= (len(result) / 2.0)
+
+		clusters = [] # lists of (index, encoding)
+
+		for index in sorted(faces.keys()):
+			face = faces[index]
+			try:
+				encoding = face_recognition.face_encodings(face)[0]
+			except IndexError: # face not found (aha)
+				continue
+
+			found = False
+			for i in range(len(clusters)):
+				cluster = clusters[i]
+				result = face_recognition.compare_faces([x[1] for x in cluster], encoding)
+
+				#print("{} against cluster[{}]: {}".format(index, i, result))
+				if is_same_person(result):
+					cluster.append((index, encoding))
+					found = True
+					break
+
+			if not found:
+				clusters.append([(index, encoding)])
+
+		# post-process to increase accuracy: starting from clusters with least # faces,
+		# check with previous clusters to see if they belong to the same person.
+		# if true, merge, else discard cluster. We value precision higher than recall.
+		for i in range(len(clusters) - 1, -1, -1):
+			cluster = clusters[i]
+
+			# check face one by one (since precision is the most important)
+			for k in range(len(cluster) -1, -1, -1):
+				index, encoding = cluster[k]
+
+				for other_cluster in clusters[:i]:
+					result = face_recognition.compare_faces([x[1] for x in other_cluster], encoding)
+
+					# if same, delete k-th element from current cluster, add it to main cluster
+					if is_same_person(result):
+						other_cluster.append((index, encoding))
+						cluster.pop(k)
+						break
+					# otherwise do nothing
+
+			# delete this cluster if it is not main_character
+			if len(cluster) < 10:
+				clusters.pop(i)
+
+		# print all results
+		for character in clusters:
+			indices = [x[0] for x in character]
+			print("Person: {}".format(indices))
+
 
 if __name__ == '__main__':
 	movies = commons.load_movies()
-	save_faces(movies)
+	#save_faces(movies)
+	face_clustering(movies)
