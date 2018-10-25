@@ -1,10 +1,10 @@
 credentials.py
 
 venv
-data
 
 *.pyc
 *.avi
 *.mp4 
+*.jpg
 
 !/.gitignore

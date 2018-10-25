@@ -1,0 +1,143 @@
+1
+000:000:15,480 --> 000:000:21,300
+-You've known for 24 hours that an unregistered wizard set magical beasts loose in New York?
+
+2
+000:000:22,160 --> 000:000:22,820
+-Yes.
+
+3
+000:000:23,100 --> 000:000:24,340
+-Where is this man?
+
+4
+000:000:24,980 --> 000:000:25,880
+*Knocking*
+
+5
+000:000:30,140 --> 000:000:30,800
+-So...
+
+6
+000:000:31,000 --> 000:000:33,120
+You're the guy with the case full of monsters, huh?
+
+7
+000:000:33,420 --> 000:000:34,620
+-News travels fast.
+
+8
+000:000:37,100 --> 000:000:40,740
+-Mr. Scamander, do you know anything about the wizarding community in America?
+
+9
+000:000:43,480 --> 000:000:44,640
+We don't let things loose.
+
+10
+000:000:45,220 --> 000:000:47,900
+-Hey! Mr. English guy! I think your egg is hatching.
+
+11
+000:000:50,260 --> 000:000:52,200
+-You wiped his memory, right? The No-maj?
+
+12
+000:000:52,280 --> 000:000:52,780
+-The what?
+
+13
+000:000:52,880 --> 000:000:54,680
+-No magic. The non-wizard!
+
+14
+000:000:54,840 --> 000:000:56,120
+-Sorry, we call them "muggles".
+
+15
+000:001:05,320 --> 000:001:06,360
+-I don't think I'm dreaming.
+
+16
+000:001:06,700 --> 000:001:07,580
+-What gave it away?
+
+17
+000:001:07,820 --> 000:001:09,620
+-I ain't got the brains to make this up.
+
+18
+000:001:10,260 --> 000:001:11,220
+*Roar*
+
+19
+000:001:12,780 --> 000:001:14,900
+-Something is stalking our streets!
+
+20
+000:001:16,580 --> 000:001:20,660
+Wreaking destruction and then disappearing without a trace!
+
+21
+000:001:21,340 --> 000:001:23,620
+Witches live among us.
+
+22
+000:001:24,920 --> 000:001:26,720
+-We've lived in the shadows for too long.
+
+23
+000:001:28,540 --> 000:001:29,800
+-I ask all of you...
+
+24
+000:001:31,620 --> 000:001:33,280
+Who does this protect?
+
+25
+000:001:34,780 --> 000:001:35,280
+Us?
+
+26
+000:001:36,520 --> 000:001:37,240
+Or them?
+
+27
+000:001:41,460 --> 000:001:42,100
+-Danger.
+
+28
+000:001:42,100 --> 000:001:43,220
+-He senses danger.
+
+29
+000:001:45,680 --> 000:001:48,120
+-This is related to Grindlewald's attacks in Europe.
+
+30
+000:001:48,360 --> 000:001:49,600
+This could mean war.
+
+31
+000:001:51,560 --> 000:001:52,980
+-We got a plan, right guys?
+
+32
+000:001:53,060 --> 000:001:53,940
+-They need our help.
+
+33
+000:001:59,980 --> 000:002:01,720
+Was that everything that came out of the case?
+
+34
+000:002:09,560 --> 000:002:10,720
+-I won't let another one die.
+
+35
+000:002:11,900 --> 000:002:13,540
+-I refuse to bow down any longer.
+
+36
+000:002:23,520 --> 000:002:25,520
+Time is running out, Mr. Scamander.

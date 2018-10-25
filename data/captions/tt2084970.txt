@@ -1,0 +1,203 @@
+1
+000:000:09,830 --> 000:000:14,170
+<font color="#CCCCCC">this</font><font color="#E5E5E5"> war</font>
+
+2
+000:000:12,140 --> 000:000:15,910
+we're not<font color="#CCCCCC"> winning it</font>
+
+3
+000:000:14,170 --> 000:000:17,260
+speak a word of what<font color="#E5E5E5"> I'm about to show</font>
+
+4
+000:000:15,910 --> 000:000:20,260
+you<font color="#E5E5E5"> you will be executed</font><font color="#CCCCCC"> for high</font>
+
+5
+000:000:17,260 --> 000:000:21,970
+treason<font color="#CCCCCC"> it's beautiful</font><font color="#E5E5E5"> it's the greatest</font>
+
+6
+000:000:20,260 --> 000:000:24,130
+<font color="#E5E5E5">encryption device in history</font><font color="#CCCCCC"> and the</font>
+
+7
+000:000:21,970 --> 000:000:26,130
+Germans use it for all<font color="#E5E5E5"> communications</font>
+
+8
+000:000:24,130 --> 000:000:29,020
+everyone thinks enigma is unbreakable
+
+9
+000:000:26,130 --> 000:000:30,580
+<font color="#CCCCCC">let me try and we'll know for sure mr.</font>
+
+10
+000:000:29,020 --> 000:000:31,119
+Turing do you know how many<font color="#CCCCCC"> died because</font>
+
+11
+000:000:30,580 --> 000:000:35,980
+of<font color="#E5E5E5"> it</font>
+
+12
+000:000:31,119 --> 000:000:40,239
+I don't<font color="#E5E5E5"> three while we've been having</font>
+
+13
+000:000:35,980 --> 000:000:40,690
+this conversation<font color="#E5E5E5"> gentlemen meet mr.</font>
+
+14
+000:000:40,239 --> 000:000:42,610
+Turing
+
+15
+000:000:40,690 --> 000:000:44,320
+we work together then I'm afraid<font color="#E5E5E5"> these</font>
+
+16
+000:000:42,610 --> 000:000:47,800
+men would only<font color="#E5E5E5"> send me down popular at</font>
+
+17
+000:000:44,320 --> 000:000:51,430
+school<font color="#CCCCCC"> way short on staff we get more</font>
+
+18
+000:000:47,800 --> 000:000:53,589
+<font color="#E5E5E5">staff</font><font color="#CCCCCC"> then you have</font><font color="#E5E5E5"> six minutes to</font>
+
+19
+000:000:51,430 --> 000:000:57,519
+<font color="#E5E5E5">complete the task</font><font color="#CCCCCC"> it's</font><font color="#E5E5E5"> not even possible</font>
+
+20
+000:000:53,589 --> 000:000:59,699
+<font color="#CCCCCC">no takes me eight five minutes and 34</font>
+
+21
+000:000:57,519 --> 000:001:02,320
+seconds you said to do<font color="#E5E5E5"> it in</font><font color="#CCCCCC"> under</font><font color="#E5E5E5"> six</font>
+
+22
+000:000:59,699 --> 000:001:03,760
+<font color="#E5E5E5">what is it that we're</font><font color="#CCCCCC"> really doing we</font>
+
+23
+000:001:02,320 --> 000:001:08,740
+were going to break<font color="#E5E5E5"> an unbreakable Nazi</font>
+
+24
+000:001:03,760 --> 000:001:11,350
+code and win the war you<font color="#CCCCCC"> know to pull</font>
+
+25
+000:001:08,740 --> 000:001:13,960
+off this irascible genius routine one
+
+26
+000:001:11,350 --> 000:001:15,729
+actually has to be<font color="#CCCCCC"> a genius</font><font color="#E5E5E5"> I'm</font>
+
+27
+000:001:13,960 --> 000:001:17,860
+designing a<font color="#CCCCCC"> machine that will allow us</font>
+
+28
+000:001:15,729 --> 000:001:20,770
+<font color="#CCCCCC">to break every message every day</font>
+
+29
+000:001:17,860 --> 000:001:22,210
+incidentally
+
+30
+000:001:20,770 --> 000:001:24,100
+you're going to need all<font color="#CCCCCC"> the help</font><font color="#E5E5E5"> you</font>
+
+31
+000:001:22,210 --> 000:001:26,320
+<font color="#E5E5E5">can get and they are not going to help</font>
+
+32
+000:001:24,100 --> 000:001:28,659
+you if they<font color="#CCCCCC"> do not</font><font color="#E5E5E5"> like</font><font color="#CCCCCC"> you</font><font color="#E5E5E5"> have you</font>
+
+33
+000:001:26,320 --> 000:001:31,090
+decrypted a single<font color="#CCCCCC"> German message you</font>
+
+34
+000:001:28,659 --> 000:001:33,939
+will never understand the<font color="#E5E5E5"> importance of</font>
+
+35
+000:001:31,090 --> 000:001:34,539
+what I am<font color="#E5E5E5"> creating here</font><font color="#CCCCCC"> our patience</font><font color="#E5E5E5"> has</font>
+
+36
+000:001:33,939 --> 000:001:38,110
+expired
+
+37
+000:001:34,539 --> 000:001:39,970
+<font color="#E5E5E5">No if you fire Helen</font><font color="#CCCCCC"> well then you'll</font>
+
+38
+000:001:38,110 --> 000:001:45,729
+<font color="#CCCCCC">have</font><font color="#E5E5E5"> to fire me</font><font color="#CCCCCC"> me too</font>
+
+39
+000:001:39,970 --> 000:001:47,970
+and<font color="#E5E5E5"> me better bloody well Helen you do</font>
+
+40
+000:001:45,729 --> 000:001:50,550
+not have to do this alone
+
+41
+000:001:47,970 --> 000:001:52,230
+what you drink what's going on<font color="#CCCCCC"> Navy</font>
+
+42
+000:001:50,550 --> 000:001:54,300
+<font color="#E5E5E5">things that one of</font><font color="#CCCCCC"> us</font><font color="#E5E5E5"> is</font><font color="#CCCCCC"> a Soviet spy</font>
+
+43
+000:001:52,230 --> 000:001:57,120
+you've got more secrets from<font color="#E5E5E5"> the best of</font>
+
+44
+000:001:54,300 --> 000:001:59,170
+<font color="#E5E5E5">them what if I</font><font color="#CCCCCC"> don't fancy but in that</font>
+
+45
+000:001:57,120 --> 000:002:02,400
+way<font color="#E5E5E5"> can't tell anyone no it's illegal</font>
+
+46
+000:001:59,170 --> 000:002:02,400
+[Music]
+
+47
+000:002:04,230 --> 000:002:09,980
+<font color="#CCCCCC">I'm</font><font color="#E5E5E5"> just a mathematician</font><font color="#CCCCCC"> sometimes it is</font>
+
+48
+000:002:06,960 --> 000:002:14,450
+<font color="#E5E5E5">people</font><font color="#CCCCCC"> who no one imagines anything on</font>
+
+49
+000:002:09,980 --> 000:002:14,450
+and do the things that<font color="#CCCCCC"> no</font>
+
+50
+000:002:21,780 --> 000:002:28,449
+[Music]
+
+51
+000:002:30,350 --> 000:002:32,410
+you

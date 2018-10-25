@@ -1,0 +1,127 @@
+1
+000:000:19,407 --> 000:000:21,408
+[choir singing softly]
+
+2
+000:000:23,711 --> 000:000:27,414
+[female speaking elvish]
+
+3
+000:000:27,415 --> 000:000:30,250
+Female translating: <i>The world is changed.</i>
+
+4
+000:000:30,251 --> 000:000:33,986
+<i>I feel it in the water.</i>
+
+5
+000:000:33,987 --> 000:000:38,525
+<i>I feel it in the earth.</i>
+
+6
+000:000:38,526 --> 000:000:42,262
+<i>I smell it in the air.</i>
+
+7
+000:000:42,263 --> 000:000:46,499
+<i>Much that once was,</i> <i>is lost.</i>
+
+8
+000:000:46,500 --> 000:000:50,870
+<i>For none now live</i> <i>who remember it.</i>
+
+9
+000:001:02,516 --> 000:001:06,853
+<i>It began with the forging</i> <i>of the great rings.</i>
+
+10
+000:001:06,854 --> 000:001:08,821
+<i>Three were given</i> <i>to the elves--</i>
+
+11
+000:001:08,822 --> 000:001:13,293
+<i>Immortal, wisest,</i> <i>and fairest of all beings.</i>
+
+12
+000:001:13,294 --> 000:001:16,062
+<i>Seven to the dwarf-lords--</i>
+
+13
+000:001:16,063 --> 000:001:21,234
+<i>Great miners and craftsmen</i> <i>of the mountain halls.</i>
+
+14
+000:001:21,235 --> 000:001:22,736
+<i>And nine.</i>
+
+15
+000:001:22,737 --> 000:001:26,740
+<i>Nine rings were gifted</i> <i>to the race of men,</i>
+
+16
+000:001:26,741 --> 000:001:30,777
+<i>Who, above all else,</i> <i>desire power.</i>
+
+17
+000:001:30,778 --> 000:001:32,679
+<i>For within these rings</i>
+
+18
+000:001:32,680 --> 000:001:37,917
+<i>Was bound the strength</i> <i>and will to govern each race.</i>
+
+19
+000:001:37,918 --> 000:001:41,288
+<i>But they were,</i> <i>all of them, deceived,</i>
+
+20
+000:001:41,289 --> 000:001:43,790
+<i>For another ring was made.</i>
+
+21
+000:001:43,791 --> 000:001:48,060
+<i>In the land of mordor</i> <i>in the fires of mount doom,</i>
+
+22
+000:001:48,061 --> 000:001:53,099
+<i>The dark lord sauron forged,</i> <i>in secret, a master ring</i>
+
+23
+000:001:53,100 --> 000:001:55,101
+<i>To control all others.</i>
+
+24
+000:001:55,102 --> 000:001:59,739
+<i>And into this ring he poured</i> <i>his cruelty, his malice,</i>
+
+25
+000:001:59,740 --> 000:002:02,475
+<i>And his will</i> <i>to dominate all life.</i>
+
+26
+000:002:04,812 --> 000:002:08,548
+<i>One ring to rule them all.</i>
+
+27
+000:002:08,549 --> 000:002:13,320
+<i>One by one,</i> <i>the free lands of middle-earth</i>
+
+28
+000:002:13,321 --> 000:002:16,189
+<i>Fell to the power</i> <i>of the ring.</i>
+
+29
+000:002:16,190 --> 000:002:19,726
+<i>But there were some</i> <i>who resisted.</i>
+
+30
+000:002:19,727 --> 000:002:22,128
+<i>A last alliance</i> <i>of men and elves</i>
+
+31
+000:002:22,129 --> 000:002:24,096
+<i>Marched against the armies</i> <i>of mordor.</i>
+
+32
+000:002:24,097 --> 000:002:26,333
+<i>And on the slopes</i> <i>of mount doom,</i>

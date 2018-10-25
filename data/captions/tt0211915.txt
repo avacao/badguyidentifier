@@ -1,0 +1,19 @@
+1
+000:000:10,000 --> 000:000:13,660
+Do you know what these people have in common?
+
+2
+000:000:16,000 --> 000:000:17,600
+This is Amelie.
+
+3
+000:000:19,000 --> 000:000:23,000
+With the discovery of a simple childhood treasure,
+
+4
+000:000:23,100 --> 000:000:27,000
+she begins a quest to fix other people's lives.
+
+5
+000:000:29,600 --> 000:000:33,000
+And perhaps her own as well.
