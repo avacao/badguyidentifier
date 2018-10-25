@@ -149,7 +149,7 @@ Using extracted faces in folder, identify main characters and re-ID
 def face_clustering(movies):
 	errors = []
 
-	for imdb_id in ["tt3501632"]:
+	for imdb_id in movies:
 		movie = movies[imdb_id]
 		face_dir = commons.get_faces_dir(imdb_id)
 
