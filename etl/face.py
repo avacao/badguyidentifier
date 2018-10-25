@@ -72,8 +72,10 @@ def scale_face_rectangle(top, right, bottom, left, height, width):
 	return top, right, bottom, left
 
 def save_faces(movies):
-	#for imdb_id in ["tt1843866", "tt3501632", "tt0264464"]:
-	for imdb_id in movies:
+	errors = []
+
+	for imdb_id in ['tt0816692']:
+	#for imdb_id in movies:
 		movie = movies[imdb_id]
 
 		input_movie = cv2.VideoCapture(commons.get_video_path(imdb_id))
@@ -88,6 +90,17 @@ def save_faces(movies):
 		frame_count = input_movie.get(cv2.CAP_PROP_FRAME_COUNT)
 		height = int(input_movie.get(cv2.CAP_PROP_FRAME_HEIGHT))
 		width = int(input_movie.get(cv2.CAP_PROP_FRAME_WIDTH))
+
+
+		if frame_count == 0.0:
+			error_msg = "ERROR: movie <{}> {} does not have a trailer.\n"\
+				.format(imdb_id, movie.name)
+			errors.append(error_msg)
+
+			input_movie.release()
+			cv2.destroyAllWindows()
+			continue
+
 
 		i, face_count = -1, 0
 		while True:
@@ -123,6 +136,9 @@ def save_faces(movies):
 		open(os.path.join(face_dir, '_SUCCESS'), "a").close() # mark success
 		input_movie.release()
 		cv2.destroyAllWindows()
+
+	for error_msg in errors:
+		print(error_msg)
 
 """
 Using extracted faces in folder, identify main characters and re-ID
@@ -211,5 +227,5 @@ def face_clustering(movies):
 
 if __name__ == '__main__':
 	movies = commons.load_movies()
-	#save_faces(movies)
-	face_clustering(movies)
+	save_faces(movies)
+	#face_clustering(movies)
