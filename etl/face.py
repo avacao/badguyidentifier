@@ -71,11 +71,13 @@ def scale_face_rectangle(top, right, bottom, left, height, width):
 	left = max(0, int((right+left)/2 - abs(right-left)/2 * FACE_SCALE))
 	return top, right, bottom, left
 
+"""
+Used for generate groundtruth label. Extract faces appeared for each trailer.
+"""
 def save_faces(movies):
 	errors = []
 
-	for imdb_id in ['tt0816692']:
-	#for imdb_id in movies:
+	for imdb_id in movies:
 		movie = movies[imdb_id]
 
 		input_movie = cv2.VideoCapture(commons.get_video_path(imdb_id))
@@ -141,17 +143,20 @@ def save_faces(movies):
 		print(error_msg)
 
 """
+Generate groundtruth label.
 Using extracted faces in folder, identify main characters and re-ID
 """
 def face_clustering(movies):
+	errors = []
+
 	for imdb_id in ["tt3501632"]:
 		movie = movies[imdb_id]
 		face_dir = commons.get_faces_dir(imdb_id)
 
 		# check if face detection has succeeded
 		if not os.path.exists(os.path.join(face_dir, '_SUCCESS')):
-			sys.stderr.write("ERROR: movie {} - {} face not extracted.".format(imdb_id, movie.name))
-			sys.stderr.flush()
+			error_msg = "ERROR: movie <{}> {} face not extracted.".format(imdb_id, movie.name)
+			errors.append(error_msg)
 			continue
 
 		# open all faces
@@ -186,7 +191,6 @@ def face_clustering(movies):
 				cluster = clusters[i]
 				result = face_recognition.compare_faces([x[1] for x in cluster], encoding)
 
-				#print("{} against cluster[{}]: {}".format(index, i, result))
 				if is_same_person(result):
 					cluster.append((index, encoding))
 					found = True
@@ -219,13 +223,16 @@ def face_clustering(movies):
 			if len(cluster) < 10:
 				clusters.pop(i)
 
-		# print all results
-		for character in clusters:
-			indices = [x[0] for x in character]
-			print("Person: {}".format(indices))
+		# save all results to _SUCCESS
+		with open(os.path.join(face_dir, '_SUCCESS'), 'w') as f:
+			for i in range(len(clusters)):
+				indices = [x[0] for x in clusters[i]]
+				f.write("{}: {}".format(i, indices))
+
+			print("Movie <{}> {} face clustering done.".format(imdb_id, movie.name))
 
 
 if __name__ == '__main__':
 	movies = commons.load_movies()
-	save_faces(movies)
-	#face_clustering(movies)
+	#save_faces(movies)
+	face_clustering(movies)
