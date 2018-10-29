@@ -28,7 +28,7 @@ class Movie:
 		youtube_api_version = 'v3'
 		DEVELOPER_KEY = credentials.DEVELOPER_KEY
 
-		keyword = self.name + " official trailer"
+		keyword = "{} {} official trailer".format(self.name, self.imdb_features['year'])
 
 		youtube = build(youtube_api_service_name, youtube_api_version, developerKey=DEVELOPER_KEY)
 		response = youtube.search().list(
