@@ -28,7 +28,7 @@ Logic:
 - must be in English
 - votes >= 250,000
 """
-def insert_if_ok(movies, name, imdb_id):
+def insert_if_ok(movies, name, imdb_id, year):
 	imdb_url = "https://www.imdb.com/title/" + imdb_id
 
 	response = requests.get(imdb_url)
@@ -59,7 +59,7 @@ def insert_if_ok(movies, name, imdb_id):
 		return False
 
 	if imdb_id not in movies:
-		movies[imdb_id] = Movie(name, imdb_id)
+		movies[imdb_id] = Movie(name, imdb_id, year)
 		movies[imdb_id].imdb_features['genre'] = genres
 
 	return True
@@ -84,8 +84,7 @@ def get_movies_from_imdb(movies):
 
 			print("Movie {}...".format(name), end="")
 			
-			if insert_if_ok(movies, name, imdb_id):
-				movies[imdb_id].imdb_features['year'] = year
+			if insert_if_ok(movies, name, imdb_id, year):
 				print("stored.")
 			else:
 				print("skipped.")

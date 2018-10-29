@@ -9,11 +9,11 @@ VIDEOS_PATH = "../data/videos"
 CAPTIONS_PATH = "../data/captions"
 
 class Movie:
-	def __init__(self, name, imdb_id):
+	def __init__(self, name, imdb_id, year):
 		# First tier features, from IMDB
 		self.name = name
 		self.imdb_id = imdb_id # primary key
-		self.imdb_features = {}
+		self.imdb_features = {'year': year}
 
 		# Second tier features, from YouTube
 		self.video_id = self._get_video_id()
