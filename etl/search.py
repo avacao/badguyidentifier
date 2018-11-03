@@ -41,7 +41,7 @@ def insert_if_ok(movies, name, imdb_id, year):
 	# get genres
 	genres = []
 	for line in html.find("div", class_="subtext").find_all("a")[:-1]:
-		genres.append(str(line.contents[0]))
+		genres.append(str(line.contents[0]).strip())
 	if "Animation" in set(genres):
 		return False
 
@@ -65,9 +65,10 @@ def insert_if_ok(movies, name, imdb_id, year):
 	return True
 
 
+
 def get_movies_from_imdb(movies):
 
-	for year in range(2002, 2018):
+	for year in range(1995, 2018):
 		# 1. get most featured movies in this year from imdb
 		imdb_list_url = "https://www.imdb.com/search/title?year={}&title_type=feature&".format(year)
 
@@ -78,7 +79,7 @@ def get_movies_from_imdb(movies):
 
 		# 2. parse html response, get each movie
 		html = BeautifulSoup(response.content, 'html.parser')
-		for line in html.find_all("h3", class_="lister-item-header")[:20]:
+		for line in html.find_all("h3", class_="lister-item-header")[:30]:
 			name, imdb_suburl = str(line.find('a').contents[0]), line.find('a')['href']
 			imdb_id = imdb_suburl.split('/')[2]
 
@@ -97,9 +98,11 @@ def download_movies(movies):
 
 if __name__ == "__main__":
 	movies = load_keyvalue_store()
-	# get_movies_from_imdb(movies)
-	# save_movies(movies)
+	get_movies_from_imdb(movies)
+	save_movies(movies)
 
-	download_movies(movies)
+	print("Completed. number of movies: {}".format(len(movies)))
+
+	# download_movies(movies)
 
 
