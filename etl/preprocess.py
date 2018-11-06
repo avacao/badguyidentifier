@@ -44,13 +44,17 @@ def generate_character_encodings():
 
 	movies = commons.load_movies()
 	for imdb_id in movies:
+		print("Generate face encoding for movie <{}> {}... ".format(imdb_id, movies[imdb_id].name), end="")
 
 		if os.path.exists(commons.get_characters_path(imdb_id)):
+			print("Already exists.")
 			continue
 
 		characters = get_characters(imdb_id)
 		with open(commons.get_characters_path(imdb_id), 'wb') as f:
 			pickle.dump(characters, f)
+
+		print("Done.")
 
 if __name__ == '__main__':
 	generate_character_encodings()
