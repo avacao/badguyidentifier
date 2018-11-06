@@ -1,0 +1,11 @@
+1
+000:001:20,665 --> 000:001:25,294
+Flight 784 for San Francisco is now ready for boarding.
+
+2
+000:002:00,040 --> 000:002:05,587
+Passengers for flight 841 to Rome, come to gate seven.
+
+3
+000:002:17,976 --> 000:002:21,020
+Flight 784 to San Francisco is now ready for boarding at-

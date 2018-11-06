@@ -1,107 +1,127 @@
 1
-000:000:00,000 --> 000:000:13,800
-I will tell you God's truth
+000:000:06,354 --> 000:000:09,175
+♪ ("NO CHURCH IN THE WILD" BY JAY Z & KANYE WEST PLAYING) ♪
 
 2
-000:000:10,420 --> 000:000:13,800
-God's truth about myself
+000:000:09,175 --> 000:000:11,465
+NICK: <i>New York, 1922.</i>
 
 3
-000:000:14,339 --> 000:000:21,279
-I am the son of some very wealthy<font color="#E5E5E5"> people</font>
+000:000:12,526 --> 000:000:15,334
+<i>The tempo of the city had changed sharply.</i>
 
 4
-000:000:17,939 --> 000:000:23,680
-<font color="#E5E5E5">sadly they're all dead</font><font color="#CCCCCC"> nothing King I</font>
+000:000:15,334 --> 000:000:17,827
+<i>The buildings were higher.</i>
 
 5
-000:000:21,279 --> 000:000:27,340
-live all the capitals of Europe<font color="#E5E5E5"> flaking</font>
+000:000:17,827 --> 000:000:19,610
+<i>The parties were bigger.</i>
 
 6
-000:000:23,680 --> 000:000:29,939
-jewels hunting big game painting and
+000:000:19,610 --> 000:000:22,278
+<i>The morals were looser and the liquor was cheaper.</i>
 
 7
-000:000:27,340 --> 000:000:31,589
-came the world's<font color="#E5E5E5"> poor</font>
+000:000:23,096 --> 000:000:26,657
+<i>The restlessness approached, hysteria.</i>
 
 8
-000:000:29,939 --> 000:000:35,309
-every allied government<font color="#CCCCCC"> gave me a</font>
+000:000:26,657 --> 000:000:27,657
+Shall we?
 
 9
-000:000:31,589 --> 000:000:38,430
-decoration<font color="#E5E5E5"> major Jay Gatsby for valor</font>
+000:000:28,332 --> 000:000:29,635
+Who is this Gatsby?
 
 10
-000:000:35,309 --> 000:000:48,239
-extraordinary<font color="#CCCCCC"> that's right</font><font color="#E5E5E5"> could it all</font>
+000:000:29,753 --> 000:000:31,537
+-Do you know him? -War hero.
 
 11
-000:000:38,430 --> 000:000:51,269
-be true Gatsby<font color="#E5E5E5"> you have an extraordinary</font>
+000:000:31,537 --> 000:000:33,764
+Mr. Gatsby doesn't exist.
 
 12
-000:000:48,239 --> 000:000:59,790
-<font color="#E5E5E5">sense of hope but</font><font color="#CCCCCC"> I had the uneasy</font>
+000:000:33,764 --> 000:000:35,516
+Gatsby? What Gatsby?
 
 13
-000:000:51,269 --> 000:001:09,689
-feeling that<font color="#E5E5E5"> he was</font><font color="#CCCCCC"> guarding secrets I'd</font>
+000:000:35,516 --> 000:000:39,578
+(CHEERING)
 
 14
-000:000:59,790 --> 000:001:11,159
-like to know who he is what he<font color="#E5E5E5"> does</font><font color="#CCCCCC"> mr.</font>
+000:000:39,578 --> 000:000:44,963
+I beg your pardon. Mr. Gatsby would like to speak to you... alone.
 
 15
-000:001:09,689 --> 000:001:13,970
-Carraway there's my good<font color="#E5E5E5"> friend</font><font color="#CCCCCC"> mr.</font>
+000:000:52,865 --> 000:000:55,061
+I'm certainly glad to see you again.
 
 16
-000:001:11,159 --> 000:001:13,970
-Meyer Wolfsheim
+000:000:56,177 --> 000:000:58,247
+I'm certainly glad to see you as well.
 
 17
-000:001:14,170 --> 000:001:20,350
-<font color="#CCCCCC">allison is</font><font color="#E5E5E5"> looking for a business</font>
+000:000:59,907 --> 000:001:02,723
+WOLFSHEIM: When I made the pleasure of Mr. Gatsby's acquaintance,
 
 18
-000:001:16,130 --> 000:001:33,310
-<font color="#E5E5E5">connection happens be confidential</font>
+000:001:02,723 --> 000:001:07,048
+-I discovered a man of fine breeding. -NICK: Very interesting.
 
 19
-000:001:20,350 --> 000:001:38,260
-<font color="#E5E5E5">you understand I do I'm certainly glad</font>
+000:001:07,048 --> 000:001:09,050
+-Is everything alright? -Uh, yes.
 
 20
-000:001:33,310 --> 000:001:40,220
-<font color="#CCCCCC">to see you again I</font><font color="#E5E5E5"> think about you</font>
+000:001:10,015 --> 000:001:15,079
+♪ ("LOVE IS BLINDNESS" BY JACK WHITE PLAYING) ♪
 
 21
-000:001:38,260 --> 000:001:45,790
-it's
+000:001:16,879 --> 000:001:19,018
+DAISY: <i>You always look so cool.</i>
 
 22
-000:001:40,220 --> 000:001:45,790
-right<font color="#E5E5E5"> I'm glad to see you so</font>
+000:001:19,480 --> 000:001:22,035
+<i>The man in the cool, beautiful shirts.</i>
 
 23
-000:001:47,010 --> 000:002:01,600
-<font color="#CCCCCC">we just</font><font color="#E5E5E5"> run away</font><font color="#CCCCCC"> I've just heard the</font>
+000:001:25,635 --> 000:001:28,259
+JAY: <i>She has to tell him she never loved him.</i>
 
 24
-000:001:50,380 --> 000:002:05,610
-<font color="#CCCCCC">most shocking</font><font color="#E5E5E5"> thing can't repeat the</font>
+000:001:29,834 --> 000:001:33,012
+I've just heard the most shocking thing.
 
 25
-000:002:01,600 --> 000:002:05,610
-<font color="#E5E5E5">past can't repeat the past</font>
+000:001:33,012 --> 000:001:35,022
+It all makes sense.
 
 26
-000:002:20,159 --> 000:002:30,959
-why of course you<font color="#CCCCCC"> can</font>
+000:001:35,022 --> 000:001:37,887
+JAY: Will you come, old sport? We need you.
 
 27
-000:002:24,020 --> 000:002:30,959
-[Music]
+000:001:38,774 --> 000:001:40,944
+I wish we could just run away.
+
+28
+000:001:41,881 --> 000:001:43,000
+Mr. Gatsby, sir.
+
+29
+000:001:44,936 --> 000:001:45,836
+Not now.
+
+30
+000:002:00,747 --> 000:002:03,786
+TOM: What kind of a row are you trying to cause in my house?
+
+31
+000:002:06,451 --> 000:002:07,775
+Get the hell out of here!
+
+32
+000:002:15,334 --> 000:002:18,664
+DAISY: <i>I wish I had done everything on earth with you.</i>

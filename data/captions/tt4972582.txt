@@ -1,131 +1,175 @@
 1
-000:000:16,570 --> 000:000:19,250
-Hey
+000:000:17,300 --> 000:000:17,800
+Hey!
 
 2
-000:000:17,870 --> 000:000:21,520
-pardon me sir<font color="#E5E5E5"> I</font><font color="#CCCCCC"> think</font><font color="#E5E5E5"> you</font><font color="#CCCCCC"> have the wrong</font>
+000:000:17,800 --> 000:000:19,760
+Pardon me, Sir. I think you have the wrong car.
 
 3
-000:000:19,250 --> 000:000:21,520
-<font color="#E5E5E5">car</font>
+000:000:29,920 --> 000:000:31,280
+What are we doing here?
 
 4
-000:000:29,180 --> 000:000:36,750
-what are we doing here what<font color="#E5E5E5"> the hell is</font>
+000:000:32,720 --> 000:000:34,400
+What the hell is going on?
 
 5
-000:000:33,360 --> 000:000:38,989
-going on I was sent to get<font color="#CCCCCC"> you for a</font>
+000:000:35,140 --> 000:000:37,300
+I was sent to get you for a reason.
 
 6
-000:000:36,750 --> 000:000:38,989
-reason
+000:000:38,160 --> 000:000:39,780
+Open the door!
 
 7
-000:000:40,100 --> 000:000:44,610
-<font color="#E5E5E5">there was a flower on the pillows a</font>
+000:000:39,900 --> 000:000:40,540
+No!
 
 8
-000:000:42,660 --> 000:000:47,280
-flower in the<font color="#E5E5E5"> bathroom like we're</font>
+000:000:40,980 --> 000:000:42,400
+There's a flower on the pillows.
 
 9
-000:000:44,610 --> 000:000:49,980
-important the only<font color="#CCCCCC"> chance we have is if</font>
+000:000:42,400 --> 000:000:43,820
+A flower in the bathroom.
 
 10
-000:000:47,280 --> 000:000:56,909
-all three<font color="#E5E5E5"> of us go crazy</font><font color="#CCCCCC"> on this guy who</font>
+000:000:44,260 --> 000:000:45,080
+Like we're important.
 
 11
-000:000:49,980 --> 000:001:02,910
-<font color="#E5E5E5">is that maybe she can</font><font color="#CCCCCC"> help us</font><font color="#E5E5E5"> don't</font>
+000:000:45,720 --> 000:000:49,040
+The only chance we have is if all three of us go crazy on this guy.
 
 12
-000:000:56,909 --> 000:001:04,970
-worry<font color="#E5E5E5"> he's</font><font color="#CCCCCC"> not allowed</font><font color="#E5E5E5"> to touch him he</font>
+000:000:49,820 --> 000:000:50,620
+Who is that?
 
 13
-000:001:02,910 --> 000:001:09,050
-knows what you're here for
+000:000:50,620 --> 000:000:51,620
+Maybe she can help us.
 
 14
-000:001:04,970 --> 000:001:09,050
-he listens<font color="#E5E5E5"> to me</font>
+000:000:51,680 --> 000:000:52,380
+We're here!
 
 15
-000:001:13,130 --> 000:001:22,740
-my name is Hedwig how old are you<font color="#CCCCCC"> 9 I've</font>
+000:000:52,380 --> 000:000:52,920
+Help us!
 
 16
-000:001:20,580 --> 000:001:27,570
-never seen a case<font color="#E5E5E5"> like this before</font>
+000:000:52,920 --> 000:000:53,720
+We're in here!
 
 17
-000:001:22,740 --> 000:001:33,360
-23 identities live in Kevin's body<font color="#E5E5E5"> who</font>
+000:000:56,540 --> 000:000:57,420
+Don't worry.
 
 18
-000:001:27,570 --> 000:001:35,940
-are you help me get out<font color="#CCCCCC"> of your head</font>
+000:000:58,600 --> 000:001:00,600
+He's not allowed to touch you.
 
 19
-000:001:33,360 --> 000:001:38,840
-<font color="#CCCCCC">Regan you trying to</font><font color="#E5E5E5"> trick me</font><font color="#CCCCCC"> I'll tell</font>
+000:001:02,780 --> 000:001:04,160
+He knows what you're here for.
 
 20
-000:001:35,940 --> 000:001:41,250
-<font color="#CCCCCC">on</font><font color="#E5E5E5"> you</font><font color="#CCCCCC"> hunt you the clever ones</font><font color="#E5E5E5"> an</font>
+000:001:05,720 --> 000:001:07,220
+He listens to me.
 
 21
-000:001:38,840 --> 000:001:43,739
-individual with multiple personalities
+000:001:13,780 --> 000:001:14,980
+My name's Hedwig.
 
 22
-000:001:41,250 --> 000:001:46,979
-can<font color="#E5E5E5"> change their body chemistry</font><font color="#CCCCCC"> with</font>
+000:001:15,280 --> 000:001:16,500
+How old are you?
 
 23
-000:001:43,739 --> 000:001:55,920
-their thoughts<font color="#E5E5E5"> someone's coming</font><font color="#CCCCCC"> for</font>
+000:001:16,940 --> 000:001:17,520
+Nine.
 
 24
-000:001:46,979 --> 000:001:58,170
-who's coming the<font color="#E5E5E5"> Beast there's a man</font>
+000:001:20,380 --> 000:001:22,440
+I've never seen a case like this before.
 
 25
-000:001:55,920 --> 000:001:58,880
-here<font color="#E5E5E5"> he abducted us and he's</font><font color="#CCCCCC"> going to</font>
+000:001:22,720 --> 000:001:25,920
+Twenty-three identities live in Kevin's body.
 
 26
-000:001:58,170 --> 000:002:02,250
-kill me
+000:001:27,280 --> 000:001:28,080
+Who are you?
 
 27
-000:001:58,880 --> 000:002:04,850
-we're meant for something<font color="#E5E5E5"> something</font>
+000:001:31,720 --> 000:001:33,800
+Help me get out of here, Hedwig.
 
 28
-000:002:02,250 --> 000:002:04,850
-horrible
+000:001:34,540 --> 000:001:35,420
+You try and trick...
 
 29
-000:002:07,810 --> 000:002:23,870
-the world will understand now
+000:001:35,520 --> 000:001:36,300
+I'll tell on you.
 
 30
-000:002:11,470 --> 000:002:25,849
-<font color="#E5E5E5">the Beast is real he's done awful things</font>
+000:001:37,320 --> 000:001:38,560
+Aren't you the clever one?
 
 31
-000:002:23,870 --> 000:002:28,180
-<font color="#CCCCCC">to people</font><font color="#E5E5E5"> and he'll do awful</font><font color="#CCCCCC"> things to</font>
+000:001:38,800 --> 000:001:41,000
+An individual with multiple personalities...
 
 32
-000:002:25,849 --> 000:002:28,180
-<font color="#E5E5E5">you</font>
+000:001:41,000 --> 000:001:43,140
+...who can change their body chemistry...
 
 33
-000:002:37,319 --> 000:002:39,379
-you
+000:001:43,540 --> 000:001:44,460
+...with their thoughts.
+
+34
+000:001:45,320 --> 000:001:46,860
+Someone's coming for you.
+
+35
+000:001:47,340 --> 000:001:48,200
+Who's coming?
+
+36
+000:001:48,940 --> 000:001:49,660
+The Beast.
+
+37
+000:001:55,360 --> 000:001:56,280
+There's a man here.
+
+38
+000:001:56,280 --> 000:001:58,680
+He abducted us and he's going to kill me.
+
+39
+000:001:59,640 --> 000:002:00,980
+We're meant for something.
+
+40
+000:002:01,600 --> 000:002:03,040
+Something horrible.
+
+41
+000:002:08,700 --> 000:002:10,300
+The world will understand now.
+
+42
+000:002:12,320 --> 000:002:15,380
+The Beast is real.
+
+43
+000:002:22,960 --> 000:002:24,500
+He's done awful things to people.
+
+44
+000:002:24,500 --> 000:002:26,240
+And he'll do awful things to you.

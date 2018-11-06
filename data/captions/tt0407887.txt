@@ -1,155 +1,167 @@
 1
-000:000:00,530 --> 000:000:07,200
-and I was your age they would say we
+000:000:00,000 --> 000:000:02,060
+<font color="#E5E5E5">you</font>
 
 2
-000:000:03,540 --> 000:000:10,889
-could become cops<font color="#E5E5E5"> or criminals what I'm</font>
+000:000:06,050 --> 000:000:12,719
+and I was your age they would say<font color="#E5E5E5"> we</font>
 
 3
-000:000:07,200 --> 000:000:17,820
-saying is this when you're facing a
+000:000:09,059 --> 000:000:16,379
+have become cops<font color="#CCCCCC"> or criminals</font><font color="#E5E5E5"> what I'm</font>
 
 4
-000:000:10,889 --> 000:000:21,000
-loaded gun<font color="#E5E5E5"> what's the difference this</font><font color="#CCCCCC"> is</font>
+000:000:12,719 --> 000:000:23,339
+saying<font color="#E5E5E5"> is this when you're facing a</font>
 
 5
-000:000:17,820 --> 000:000:23,400
-<font color="#CCCCCC">not the regular place this is a state</font>
+000:000:16,379 --> 000:000:26,490
+loaded gun<font color="#E5E5E5"> what's the difference this is</font>
 
 6
-000:000:21,000 --> 000:000:27,869
-please<font color="#CCCCCC"> we</font><font color="#E5E5E5"> are in elite unit</font><font color="#CCCCCC"> mr. so we're</font>
+000:000:23,339 --> 000:000:28,769
+<font color="#E5E5E5">not the regular</font><font color="#CCCCCC"> place</font><font color="#E5E5E5"> this is a</font><font color="#CCCCCC"> stay</font>
 
 7
-000:000:23,400 --> 000:000:29,369
-after<font color="#E5E5E5"> Frank Costello you won't be paid</font>
+000:000:26,490 --> 000:000:33,180
+please<font color="#CCCCCC"> we are in elite unit</font><font color="#E5E5E5"> this</font><font color="#CCCCCC"> is a</font>
 
 8
-000:000:27,869 --> 000:000:33,560
-as a regular cop but there's a<font color="#E5E5E5"> bonus</font>
+000:000:28,769 --> 000:000:34,680
+we're after<font color="#E5E5E5"> Frank Costello you won't be</font>
 
 9
-000:000:29,369 --> 000:000:33,560
-involved so what do I do
+000:000:33,180 --> 000:000:39,110
+paid as a regular cop but there's a
 
 10
-000:000:34,250 --> 000:000:38,489
-you will<font color="#E5E5E5"> not ever know the identity of</font>
+000:000:34,680 --> 000:000:39,110
+<font color="#E5E5E5">bonus involved so what do I do</font>
 
 11
-000:000:36,660 --> 000:000:40,739
-undercover<font color="#CCCCCC"> people</font><font color="#E5E5E5"> you have anyone</font><font color="#CCCCCC"> in</font>
+000:000:39,770 --> 000:000:44,010
+you will<font color="#E5E5E5"> not ever</font><font color="#CCCCCC"> know</font><font color="#E5E5E5"> the identity of</font>
 
 12
-000:000:38,489 --> 000:000:42,480
-with Costello presently<font color="#E5E5E5"> maybe do you</font>
+000:000:42,180 --> 000:000:46,260
+undercover<font color="#E5E5E5"> people</font><font color="#CCCCCC"> you have anyone in</font>
 
 13
-000:000:40,739 --> 000:000:47,100
-know who I am<font color="#CCCCCC"> maybe</font><font color="#E5E5E5"> not</font>
+000:000:44,010 --> 000:000:47,190
+with Costello<font color="#E5E5E5"> prevalent maybe</font><font color="#CCCCCC"> Do</font><font color="#E5E5E5"> You</font>
 
 14
-000:000:42,480 --> 000:000:47,730
-when I had my<font color="#E5E5E5"> associates search you that</font>
+000:000:46,260 --> 000:000:49,590
+<font color="#E5E5E5">Know Who I am</font>
 
 15
-000:000:47,100 --> 000:000:51,270
-was quick
+000:000:47,190 --> 000:000:53,970
+maybe not when I have<font color="#CCCCCC"> my</font><font color="#E5E5E5"> associates</font>
 
 16
-000:000:47,730 --> 000:000:53,450
-he's dead<font color="#E5E5E5"> already</font><font color="#CCCCCC"> canceled I think we</font>
+000:000:49,590 --> 000:000:54,300
+<font color="#CCCCCC">search you I was quick things</font><font color="#E5E5E5"> dead</font>
 
 17
-000:000:51,270 --> 000:000:55,370
-could<font color="#E5E5E5"> work something</font>
+000:000:53,970 --> 000:000:57,180
+already
 
 18
-000:000:53,450 --> 000:000:57,200
-we are all convinced<font color="#CCCCCC"> the</font><font color="#E5E5E5"> customers at</font>
+000:000:54,300 --> 000:001:00,180
+<font color="#E5E5E5">it's a nice thing we could work</font>
 
 19
-000:000:55,370 --> 000:001:01,070
-<font color="#E5E5E5">least one mole inside the Special</font>
+000:000:57,180 --> 000:001:02,160
+something<font color="#CCCCCC"> out</font><font color="#E5E5E5"> we are all convinced the</font>
 
 20
-000:000:57,200 --> 000:001:03,199
-Investigations Unit<font color="#E5E5E5"> there are parts</font><font color="#CCCCCC"> of</font>
+000:001:00,180 --> 000:001:06,180
+<font color="#E5E5E5">customer has at least one mole inside</font>
 
 21
-000:001:01,070 --> 000:001:05,089
-my job<font color="#CCCCCC"> I can't talk to you about</font><font color="#E5E5E5"> well</font>
+000:001:02,160 --> 000:001:07,860
+the Special Investigations Unit very
 
 22
-000:001:03,199 --> 000:001:09,950
-<font color="#E5E5E5">you are trouble you don't know the half</font>
+000:001:06,180 --> 000:001:10,200
+parts are my job<font color="#E5E5E5"> I can't talk to you</font>
 
 23
-000:001:05,089 --> 000:001:11,960
-of it you better get organized<font color="#E5E5E5"> quick hey</font>
+000:001:07,860 --> 000:001:12,520
+about<font color="#CCCCCC"> well</font><font color="#E5E5E5"> you are trouble you don't</font>
 
 24
-000:001:09,950 --> 000:001:15,800
-last time I checked I tipped you<font color="#CCCCCC"> off</font><font color="#E5E5E5"> and</font>
+000:001:10,200 --> 000:001:15,740
+<font color="#CCCCCC">know the half of it</font>
 
 25
-000:001:11,960 --> 000:001:19,009
-you're not in jail<font color="#CCCCCC"> get your feeling</font><font color="#E5E5E5"> we</font>
+000:001:12,520 --> 000:001:17,180
+you better get organized quick<font color="#E5E5E5"> hey last</font>
 
 26
-000:001:15,800 --> 000:001:21,729
-got a<font color="#E5E5E5"> cup my crew</font><font color="#CCCCCC"> Silla</font><font color="#E5E5E5"> lady's gonna</font>
+000:001:15,740 --> 000:001:20,990
+time I checked<font color="#E5E5E5"> I tipped you off</font>
 
 27
-000:001:19,009 --> 000:001:24,380
-find out who I<font color="#CCCCCC"> am he's gonna kill</font><font color="#E5E5E5"> me</font><font color="#CCCCCC"> I</font>
+000:001:17,180 --> 000:001:23,090
+and you're not<font color="#E5E5E5"> in jail get the feeling</font>
 
 28
-000:001:21,729 --> 000:001:27,500
-can get<font color="#E5E5E5"> the rat</font><font color="#CCCCCC"> you just gotta let me do</font>
+000:001:20,990 --> 000:001:25,700
+<font color="#E5E5E5">we got</font><font color="#CCCCCC"> a cop crew</font>
 
 29
-000:001:24,380 --> 000:001:30,369
-it my way<font color="#CCCCCC"> if you don't</font><font color="#E5E5E5"> it won't be me</font>
+000:001:23,090 --> 000:001:26,390
+<font color="#CCCCCC">Tina ladies gonna find out who I am he's</font>
 
 30
-000:001:27,500 --> 000:001:30,369
-who<font color="#E5E5E5"> pays</font><font color="#CCCCCC"> for</font>
+000:001:25,700 --> 000:001:29,750
+gonna kill<font color="#E5E5E5"> me</font>
 
 31
-000:001:37,740 --> 000:001:43,250
-there is a leaks<font color="#E5E5E5"> on the inside</font><font color="#CCCCCC"> it's real</font>
+000:001:26,390 --> 000:001:32,930
+I can get the<font color="#CCCCCC"> rat you just gotta let me</font>
 
 32
-000:001:40,170 --> 000:001:43,250
-<font color="#E5E5E5">man</font><font color="#CCCCCC"> smoking</font><font color="#E5E5E5"> out</font>
+000:001:29,750 --> 000:001:35,380
+do it my way<font color="#CCCCCC"> if you don't</font><font color="#E5E5E5"> it won't be me</font>
 
 33
-000:001:52,070 --> 000:001:56,890
-you're lying to<font color="#CCCCCC"> me there are things</font><font color="#E5E5E5"> you</font>
+000:001:32,930 --> 000:001:35,380
+who<font color="#CCCCCC"> pays</font>
 
 34
-000:001:54,170 --> 000:001:56,890
-don't want<font color="#E5E5E5"> to know about</font>
+000:001:42,860 --> 000:001:48,670
+<font color="#E5E5E5">there's a leak from the inside it's real</font>
 
 35
-000:001:58,310 --> 000:002:01,549
-what are you waiting for<font color="#E5E5E5"> us and you</font>
+000:001:45,560 --> 000:001:48,670
+<font color="#CCCCCC">man smoking out</font>
 
 36
-000:002:00,140 --> 000:002:04,990
-wanted to<font color="#E5E5E5"> chop me</font><font color="#CCCCCC"> up and feed me the</font>
+000:001:57,579 --> 000:002:02,399
+<font color="#E5E5E5">you're lying to me there are</font><font color="#CCCCCC"> things</font><font color="#E5E5E5"> you</font>
 
 37
-000:002:01,549 --> 000:002:04,990
-poor<font color="#E5E5E5"> is that</font><font color="#CCCCCC"> what you guys want</font>
+000:001:59,679 --> 000:002:02,399
+<font color="#E5E5E5">don't want to know about</font>
 
 38
-000:002:16,910 --> 000:002:23,230
-how's your<font color="#CCCCCC"> mother</font><font color="#E5E5E5"> she's on her way</font><font color="#CCCCCC"> out</font>
+000:002:03,290 --> 000:002:06,930
+what are you waiting for<font color="#E5E5E5"> us</font><font color="#CCCCCC"> and you</font>
 
 39
-000:002:19,370 --> 000:002:23,230
-<font color="#CCCCCC">y'all are act according</font>
+000:002:05,520 --> 000:002:10,369
+wanted to<font color="#E5E5E5"> track me up and feed me the</font>
+
+40
+000:002:06,930 --> 000:002:10,369
+poor is that<font color="#CCCCCC"> what you guys want</font>
+
+41
+000:002:21,950 --> 000:002:28,790
+how's your brother<font color="#CCCCCC"> she's on her way out</font>
+
+42
+000:002:24,900 --> 000:002:28,790
+y'all<font color="#E5E5E5"> are act accordingly</font>

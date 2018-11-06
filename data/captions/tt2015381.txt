@@ -1,103 +1,107 @@
 1
-000:000:24,740 --> 000:000:33,800
-<font color="#E5E5E5">now yeah hey cumin</font><font color="#CCCCCC"> no</font><font color="#E5E5E5"> prob</font>
+000:000:22,720 --> 000:000:31,380
+<font color="#E5E5E5">Oh No</font><font color="#CCCCCC"> yeah hey</font><font color="#E5E5E5"> go man no</font><font color="#CCCCCC"> prob</font>
 
 2
-000:000:27,989 --> 000:000:44,100
-no problem at all who are you star-lord
+000:000:28,000 --> 000:000:31,380
+no problem at all
 
 3
-000:000:33,800 --> 000:000:45,899
-<font color="#CCCCCC">who star-lord man legendary outlaw</font><font color="#E5E5E5"> we</font>
+000:000:32,719 --> 000:000:44,940
+star-lord<font color="#CCCCCC"> who star-lord man legendary</font>
 
 4
-000:000:44,100 --> 000:000:47,040
-<font color="#E5E5E5">arrested these five</font><font color="#CCCCCC"> bands</font><font color="#E5E5E5"> and off check</font>
+000:000:38,040 --> 000:000:46,850
+out<font color="#CCCCCC"> Locke forget we</font><font color="#E5E5E5"> arrested these five</font>
 
 5
-000:000:45,899 --> 000:000:50,309
-out the rap sheets
+000:000:44,940 --> 000:000:50,339
+bonds and<font color="#E5E5E5"> our check out the rap sheets</font>
 
 6
-000:000:47,040 --> 000:000:51,809
-Drax<font color="#CCCCCC"> aka</font><font color="#E5E5E5"> the destroyer</font><font color="#CCCCCC"> since his</font><font color="#E5E5E5"> wife</font>
+000:000:46,850 --> 000:000:51,839
+<font color="#E5E5E5">Drax</font><font color="#CCCCCC"> aka</font><font color="#E5E5E5"> the destroyer</font><font color="#CCCCCC"> since his</font><font color="#E5E5E5"> wife</font>
 
 7
-000:000:50,309 --> 000:000:53,879
+000:000:50,339 --> 000:000:53,909
 and family<font color="#E5E5E5"> were killed he's been on a</font>
 
 8
-000:000:51,809 --> 000:000:57,570
-rampage across the galaxy in<font color="#CCCCCC"> a search</font>
+000:000:51,839 --> 000:000:57,600
+rampage across the galaxy in<font color="#E5E5E5"> a search</font>
 
 9
-000:000:53,879 --> 000:000:59,809
-<font color="#CCCCCC">for vengeance Gamora</font><font color="#E5E5E5"> soldier assassin</font>
+000:000:53,909 --> 000:000:59,839
+for vengeance<font color="#E5E5E5"> Gamora soldier assassin</font>
 
 10
-000:000:57,570 --> 000:001:02,789
-<font color="#CCCCCC">wander on over a</font><font color="#E5E5E5"> dozen counts</font><font color="#CCCCCC"> of murder</font>
+000:000:57,600 --> 000:001:02,850
+<font color="#E5E5E5">wanted</font><font color="#CCCCCC"> on over a</font><font color="#E5E5E5"> dozen counts</font><font color="#CCCCCC"> of murder</font>
 
 11
-000:000:59,809 --> 000:001:05,119
-<font color="#E5E5E5">rocket one on over 50</font><font color="#CCCCCC"> charges of</font>
+000:000:59,839 --> 000:001:05,149
+rocking one on over 50 charges of
 
 12
-000:001:02,789 --> 000:001:09,000
-vehicular theft and escaped<font color="#E5E5E5"> from</font><font color="#CCCCCC"> Locker</font>
+000:001:02,850 --> 000:001:09,030
+vehicular theft and<font color="#E5E5E5"> escaped from</font><font color="#CCCCCC"> lockup</font>
 
 13
-000:001:05,119 --> 000:001:10,950
-<font color="#E5E5E5">what how</font><font color="#CCCCCC"> root</font><font color="#E5E5E5"> it's been traveling</font>
+000:001:05,149 --> 000:001:10,979
+what how<font color="#CCCCCC"> roots</font><font color="#E5E5E5"> it's been traveling</font>
 
 14
-000:001:09,000 --> 000:001:13,740
-<font color="#CCCCCC">recently as</font><font color="#E5E5E5"> Rockets personal</font><font color="#CCCCCC"> Hass plant</font>
+000:001:09,030 --> 000:001:13,619
+recently<font color="#CCCCCC"> as</font><font color="#E5E5E5"> Rockets personal</font><font color="#CCCCCC"> houseplant</font>
 
 15
-000:001:10,950 --> 000:001:17,159
-<font color="#E5E5E5">slash muscle</font>
+000:001:10,979 --> 000:001:17,189
+<font color="#CCCCCC">slash muscle</font>
 
 16
-000:001:13,740 --> 000:001:20,490
+000:001:13,619 --> 000:001:20,520
 Peter Jason quill<font color="#CCCCCC"> he's also known as</font>
 
 17
-000:001:17,159 --> 000:001:22,530
-star-lord<font color="#CCCCCC"> pickles or not</font><font color="#E5E5E5"> himself mostly</font>
+000:001:17,189 --> 000:001:22,560
+star-lord<font color="#CCCCCC"> he calls him at himself mostly</font>
 
 18
-000:001:20,490 --> 000:001:25,710
-<font color="#CCCCCC">he's wanted largely on charges of minor</font>
+000:001:20,520 --> 000:001:25,740
+<font color="#E5E5E5">he's wanted largely on charges of minor</font>
 
 19
-000:001:22,530 --> 000:001:30,450
-assaults public<font color="#E5E5E5"> intoxication and fraud</font>
+000:001:22,560 --> 000:001:30,479
+<font color="#CCCCCC">assaults</font><font color="#E5E5E5"> public intoxication and fraud</font>
 
 20
-000:001:25,710 --> 000:001:33,170
-<font color="#CCCCCC">oh I'm sorry I</font><font color="#E5E5E5"> I didn't know how this</font>
+000:001:25,740 --> 000:001:33,200
+<font color="#CCCCCC">oh I'm sorry</font><font color="#E5E5E5"> I I didn't know how this</font>
 
 21
-000:001:30,450 --> 000:001:33,170
+000:001:30,479 --> 000:001:33,200
 machine worked
 
 22
-000:001:36,170 --> 000:001:46,369
-hey hey hey<font color="#CCCCCC"> that's mine hey take those</font>
+000:001:36,200 --> 000:001:40,549
+hey hey hey<font color="#E5E5E5"> that's mine</font>
 
 23
-000:001:43,740 --> 000:001:46,369
-headphones on
+000:001:41,299 --> 000:001:47,210
+<font color="#CCCCCC">hey</font><font color="#E5E5E5"> take those headphones on right now</font>
 
 24
-000:002:04,659 --> 000:002:11,369
+000:002:04,740 --> 000:002:11,660
 they call themselves the guardians<font color="#CCCCCC"> of</font>
 
 25
-000:002:06,880 --> 000:002:11,369
-the galaxy<font color="#CCCCCC"> but</font><font color="#E5E5E5"> a bunch of a-holes</font>
+000:002:06,869 --> 000:002:11,660
+the galaxy<font color="#CCCCCC"> and a bunch of a hos</font>
 
 26
-000:002:26,860 --> 000:002:28,920
-<font color="#E5E5E5">you</font>
+000:002:20,110 --> 000:002:28,750
+<font color="#E5E5E5">got your</font>
+
+27
+000:002:22,250 --> 000:002:28,750
+love<font color="#CCCCCC"> will me hug down a feeling</font>

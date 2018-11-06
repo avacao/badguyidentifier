@@ -1,0 +1,227 @@
+1
+000:000:09,880 --> 000:000:10,980
+Excuse me sir.
+
+2
+000:000:11,120 --> 000:000:12,020
+I'm looking for a job.
+
+3
+000:000:12,100 --> 000:000:12,880
+I'm a hardworker.
+
+4
+000:000:12,960 --> 000:000:14,380
+I set high goals.
+
+5
+000:000:14,480 --> 000:000:17,920
+My motto is: If you wanna win the lottery, you have to make the money to by the ticket.
+
+6
+000:000:18,940 --> 000:000:19,600
+So what do you say?
+
+7
+000:000:19,680 --> 000:000:20,520
+I could start tomorrow,
+
+8
+000:000:20,560 --> 000:000:21,720
+or even why not tonight?
+
+9
+000:000:22,540 --> 000:000:23,260
+No.
+
+10
+000:000:23,480 --> 000:000:24,740
+I'm not hiring.
+
+11
+000:000:30,140 --> 000:000:31,000
+We're first!
+
+12
+000:000:31,140 --> 000:000:33,040
+Go around get a shot inside the car.
+
+13
+000:000:34,920 --> 000:000:35,960
+Hey! Back away!
+
+14
+000:000:35,960 --> 000:000:36,840
+I got it! I'm back, I'm back!
+
+15
+000:000:37,080 --> 000:000:38,360
+Will this be on television?
+
+16
+000:000:38,660 --> 000:000:39,560
+Morning news,
+
+17
+000:000:39,680 --> 000:000:40,680
+if it bleeds it leads.
+
+18
+000:000:40,820 --> 000:000:42,080
+Are you currently hiring?
+
+19
+000:000:46,660 --> 000:000:48,660
+I'm starting a TV News business.
+
+20
+000:000:49,720 --> 000:000:50,540
+You! Get back!
+
+21
+000:000:51,760 --> 000:000:52,920
+I film breaking stories.
+
+22
+000:000:53,040 --> 000:000:54,380
+Maybe you saw my item this morning,
+
+23
+000:000:54,380 --> 000:000:55,540
+of a fatal carjacking.
+
+24
+000:000:55,540 --> 000:000:57,160
+No, I mean, I don't have a TV.
+
+25
+000:000:57,160 --> 000:000:57,800
+Do you have a cell phone?
+
+26
+000:000:57,800 --> 000:000:58,300
+Yeah.
+
+27
+000:000:58,300 --> 000:000:59,080
+Is that GPS?
+
+28
+000:000:59,120 --> 000:000:59,780
+Yeah..
+
+29
+000:000:59,980 --> 000:001:01,100
+Congratulations, You are hired.
+
+30
+000:001:01,520 --> 000:001:02,320
+Ohh Okay.
+
+31
+000:001:04,520 --> 000:001:05,560
+We're taking the next right.
+
+32
+000:001:05,800 --> 000:001:07,140
+That's too fast!
+
+33
+000:001:08,080 --> 000:001:08,900
+We beat the police.
+
+34
+000:001:09,460 --> 000:001:11,300
+I will never ask you to do anything,
+
+35
+000:001:12,980 --> 000:001:14,400
+that i wouldn't do myself.
+
+36
+000:001:15,900 --> 000:001:17,900
+Excuse me! I have something, you'll be very excited about.
+
+37
+000:001:18,020 --> 000:001:19,180
+You have a good eye.
+
+38
+000:001:19,180 --> 000:001:21,140
+I want you to contact me, when you have something.
+
+39
+000:001:21,160 --> 000:001:22,100
+Something like this?
+
+40
+000:001:22,160 --> 000:001:23,480
+Think of our news cast as a
+
+41
+000:001:23,480 --> 000:001:25,600
+screaming woman, running down the street with her throat cut.
+
+42
+000:001:25,600 --> 000:001:27,200
+You'll be seeing me again!
+
+43
+000:001:28,840 --> 000:001:30,160
+A home invasion.
+
+44
+000:001:42,780 --> 000:001:44,180
+You gotta call the cops!
+
+45
+000:001:44,280 --> 000:001:45,400
+And we will. At the right time.
+
+46
+000:001:49,700 --> 000:001:51,360
+We're gonna find the person that drove that car.
+
+47
+000:001:52,040 --> 000:001:53,060
+Start filming!
+
+48
+000:001:55,160 --> 000:001:56,100
+I'm Detective Frontieri.
+
+49
+000:001:56,160 --> 000:001:57,740
+I think you withheld information.
+
+50
+000:001:57,740 --> 000:002:00,500
+That would be, a very unproffesional thing for me to do.
+
+51
+000:002:00,500 --> 000:002:02,000
+That would be murder.
+
+52
+000:002:03,040 --> 000:002:04,480
+I want what you have promised me!
+
+53
+000:002:07,380 --> 000:002:09,580
+I want something people can't turn away from.
+
+54
+000:002:09,740 --> 000:002:11,360
+"911 what is your emergency?"
+
+55
+000:002:15,840 --> 000:002:17,140
+We want all of this!
+
+56
+000:002:18,020 --> 000:002:19,080
+Oh my God!
+
+57
+000:002:23,460 --> 000:002:26,660
+I think Lou is inspiring all of, us to reach a little higher.
