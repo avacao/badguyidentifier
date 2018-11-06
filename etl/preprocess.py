@@ -14,7 +14,6 @@ def generate_character_encodings():
 	def get_characters(imdb_id):
 		import ast
 
-		movies = commons.load_movies()
 		face_dir = commons.get_faces_dir(imdb_id)
 
 		# check if directory exists and face cluster is done
