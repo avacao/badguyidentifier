@@ -1,0 +1,179 @@
+1
+000:000:01,939 --> 000:000:09,230
+hello boys and<font color="#CCCCCC"> girls</font>
+
+2
+000:000:04,250 --> 000:000:13,410
+whatever<font color="#E5E5E5"> my name is Captain Jack Sparrow</font>
+
+3
+000:000:09,230 --> 000:000:16,949
+<font color="#CCCCCC">I take it some of you heard of me</font><font color="#E5E5E5"> as you</font>
+
+4
+000:000:13,410 --> 000:000:18,810
+may<font color="#CCCCCC"> well know there are at times almost</font>
+
+5
+000:000:16,949 --> 000:000:19,980
+constantly in fact<font color="#E5E5E5"> where I prefer to</font>
+
+6
+000:000:18,810 --> 000:000:20,990
+look<font color="#E5E5E5"> at the world for the bottom of a</font>
+
+7
+000:000:19,980 --> 000:000:25,519
+<font color="#E5E5E5">glass</font>
+
+8
+000:000:20,990 --> 000:000:25,519
+rub something like this
+
+9
+000:000:28,840 --> 000:000:32,860
+may have also heard whisperings and
+
+10
+000:000:30,670 --> 000:000:36,430
+<font color="#E5E5E5">rumors that Jack Sparrow be recruiting a</font>
+
+11
+000:000:32,860 --> 000:000:39,070
+crew<font color="#CCCCCC"> to undertake a voyage Fountain of</font>
+
+12
+000:000:36,430 --> 000:000:42,100
+<font color="#E5E5E5">Youth</font><font color="#CCCCCC"> not sure of course not</font>
+
+13
+000:000:39,070 --> 000:000:43,420
+but<font color="#E5E5E5"> even if it weren't not true you</font>
+
+14
+000:000:42,100 --> 000:000:54,010
+wouldn't<font color="#CCCCCC"> be interested</font><font color="#E5E5E5"> in joining me</font>
+
+15
+000:000:43,420 --> 000:000:56,550
+would you<font color="#E5E5E5"> hey death lies before us as we</font>
+
+16
+000:000:54,010 --> 000:000:59,200
+<font color="#CCCCCC">say off</font>
+
+17
+000:000:56,550 --> 000:001:03,490
+<font color="#E5E5E5">to the Fountain of Youth</font>
+
+18
+000:000:59,200 --> 000:001:03,490
+you could<font color="#E5E5E5"> guide an expedition</font>
+
+19
+000:001:03,899 --> 000:001:13,440
+<font color="#CCCCCC">ah</font><font color="#E5E5E5"> Jack Sparrow but there should be</font><font color="#CCCCCC"> a</font>
+
+20
+000:001:09,390 --> 000:001:18,180
+capsule in there somewhere<font color="#CCCCCC"> I hear a</font>
+
+21
+000:001:13,440 --> 000:001:20,159
+<font color="#CCCCCC">ruler Jack Sparrow's hell-bent to find</font>
+
+22
+000:001:18,180 --> 000:001:24,260
+the Fountain of Youth don't be a fool
+
+23
+000:001:20,159 --> 000:001:29,100
+<font color="#CCCCCC">Jackie</font><font color="#E5E5E5"> the fountain will test you</font>
+
+24
+000:001:24,260 --> 000:001:35,250
+was that really necessary gentlemen the
+
+25
+000:001:29,100 --> 000:001:37,440
+fountain is the<font color="#E5E5E5"> prize steady as she goes</font>
+
+26
+000:001:35,250 --> 000:001:38,520
+<font color="#CCCCCC">what's your play Jack I thought I should</font>
+
+27
+000:001:37,440 --> 000:001:41,420
+give you<font color="#E5E5E5"> warning we're taking the ship</font>
+
+28
+000:001:38,520 --> 000:001:41,420
+<font color="#CCCCCC">it's nothing</font><font color="#E5E5E5"> personal</font>
+
+29
+000:001:48,509 --> 000:001:58,140
+<font color="#E5E5E5">there'd be</font><font color="#CCCCCC"> dangers along the way firstly</font>
+
+30
+000:001:51,500 --> 000:002:01,100
+mermaids zombies<font color="#E5E5E5"> Blackbeard the pirate</font>
+
+31
+000:001:58,140 --> 000:002:04,479
+all<font color="#E5E5E5"> pirates fear</font>
+
+32
+000:002:01,100 --> 000:002:08,560
+if I do<font color="#E5E5E5"> not make it to the fountain</font>
+
+33
+000:002:04,479 --> 000:002:08,560
+neither will<font color="#E5E5E5"> you</font>
+
+34
+000:002:10,459 --> 000:002:15,049
+is that it Thanks
+
+35
+000:002:20,740 --> 000:002:27,670
+he has<font color="#CCCCCC"> begun</font><font color="#E5E5E5"> again</font>
+
+36
+000:002:24,069 --> 000:002:29,079
+<font color="#E5E5E5">are we not</font><font color="#CCCCCC"> change</font><font color="#E5E5E5"> man</font><font color="#CCCCCC"> how is it we can</font>
+
+37
+000:002:27,670 --> 000:002:33,120
+<font color="#E5E5E5">never meet without you pointing</font>
+
+38
+000:002:29,079 --> 000:002:33,120
+something at me<font color="#E5E5E5"> there's the</font><font color="#CCCCCC"> jack I know</font>
+
+39
+000:002:40,109 --> 000:002:43,959
+you know that<font color="#CCCCCC"> feeling you're getting</font>
+
+40
+000:002:42,219 --> 000:002:46,680
+<font color="#E5E5E5">you're standing in a high place sudden</font>
+
+41
+000:002:43,959 --> 000:002:46,680
+urge to jump
+
+42
+000:002:47,130 --> 000:002:51,440
+<font color="#CCCCCC">I don't</font><font color="#E5E5E5"> have it</font>
+
+43
+000:002:53,410 --> 000:002:58,860
+did everyone see<font color="#CCCCCC"> that</font><font color="#E5E5E5"> because I will</font><font color="#CCCCCC"> not</font>
+
+44
+000:002:55,720 --> 000:002:58,860
+be<font color="#E5E5E5"> doing it again</font>
+
+45
+000:003:07,770 --> 000:003:09,830
+<font color="#E5E5E5">you</font>

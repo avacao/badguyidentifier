@@ -98,11 +98,11 @@ def download_movies(movies):
 
 if __name__ == "__main__":
 	movies = load_keyvalue_store()
-	get_movies_from_imdb(movies)
-	save_movies(movies)
+	#get_movies_from_imdb(movies)
+	#save_movies(movies)
 
 	print("Completed. number of movies: {}".format(len(movies)))
 
-	# download_movies(movies)
+	download_movies(movies)
 
 

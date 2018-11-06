@@ -1,215 +1,123 @@
 1
-000:000:03,320 --> 000:000:05,480
-The fate of the universe lies on your shoulders.
+000:000:00,000 --> 000:000:05,259
+[Music]
 
 2
-000:000:09,020 --> 000:000:10,160
-Now whatever you do...
+000:000:06,759 --> 000:000:17,510
+the fate of the universe lies<font color="#E5E5E5"> on your</font>
 
 3
-000:000:12,620 --> 000:000:15,040
-DON'T. PUSH. THIS. BUTTON.
+000:000:09,320 --> 000:000:21,080
+shoulders<font color="#E5E5E5"> now whatever you do don't</font><font color="#CCCCCC"> push</font>
 
 4
-000:000:16,140 --> 000:000:18,160
-Because that will set off the bomb immediately,
+000:000:17,510 --> 000:000:24,339
+this but because that will set off<font color="#CCCCCC"> the</font>
 
 5
-000:000:18,160 --> 000:000:19,680
-and we'll all be dead!
+000:000:21,080 --> 000:000:27,249
+<font color="#E5E5E5">bomb immediately and we'll all be dead</font>
 
 6
-000:000:21,680 --> 000:000:23,120
-Now repeat back what I just said.
+000:000:24,339 --> 000:000:30,349
+now repeat back what I<font color="#E5E5E5"> just said</font>
 
 7
-000:000:24,220 --> 000:000:24,740
-- I am Groot.
+000:000:27,249 --> 000:000:34,420
+<font color="#CCCCCC">Congress No</font><font color="#E5E5E5"> now that's the button</font><font color="#CCCCCC"> I</font><font color="#E5E5E5"> will</font>
 
 8
-000:000:24,940 --> 000:000:25,440
-- NO!
+000:000:30,349 --> 000:000:35,660
+kill everyone<font color="#E5E5E5"> try again Conkel</font><font color="#CCCCCC"> mm-hmm oh</font>
 
 9
-000:000:26,000 --> 000:000:27,980
-No, that's the button, it'll kill everyone.
+000:000:34,420 --> 000:000:47,830
+good
 
 10
-000:000:28,660 --> 000:000:29,380
-Try again.
+000:000:35,660 --> 000:000:47,830
+uh-huh<font color="#CCCCCC"> uncle no</font><font color="#E5E5E5"> Showtime a-holes up</font>
 
 11
-000:000:29,720 --> 000:000:30,340
-- I am Groot.
+000:000:58,120 --> 000:001:01,200
+[Music]
 
 12
-000:000:30,340 --> 000:000:30,840
-- Mhm.
+000:001:01,859 --> 000:001:04,609
+you say sir
 
 13
-000:000:31,600 --> 000:000:32,400
-- I am Groot.
+000:001:13,090 --> 000:001:16,030
+does anybody have<font color="#CCCCCC"> any tape out</font><font color="#E5E5E5"> there I</font>
 
 14
-000:000:32,580 --> 000:000:33,080
-- Uh-huh.
+000:001:14,770 --> 000:001:18,670
+<font color="#E5E5E5">want to put some tape over the death</font>
 
 15
-000:000:34,080 --> 000:000:34,740
-- I am Groot.
+000:001:16,030 --> 000:001:21,100
+button<font color="#E5E5E5"> nobody has any tape</font><font color="#CCCCCC"> not</font><font color="#E5E5E5"> a single</font>
 
 16
-000:000:34,800 --> 000:000:35,680
-- NOOOOOOOOOOOO!
+000:001:18,670 --> 000:001:22,780
+person has<font color="#CCCCCC"> pain</font><font color="#E5E5E5"> you have an atomic bomb</font>
 
 17
-000:000:41,240 --> 000:000:42,680
-- Showtime, a-holes!
+000:001:21,100 --> 000:001:23,470
+in<font color="#CCCCCC"> your bag</font><font color="#E5E5E5"> if anybody's gonna have tape</font>
 
 18
-000:000:42,680 --> 000:000:43,420
-- [roaring scream]
+000:001:22,780 --> 000:001:33,479
+<font color="#E5E5E5">it's you</font>
 
 19
-000:000:47,500 --> 000:000:49,420
-♫ I... (I...) [I...] ♫
+000:001:23,470 --> 000:001:33,479
+I have to do that's<font color="#E5E5E5"> a really bad</font><font color="#CCCCCC"> sign</font>
 
 20
-000:000:49,420 --> 000:000:51,540
-♫ Don't wanna know your name... ♫
+000:001:41,090 --> 000:001:48,600
+if I touch<font color="#E5E5E5"> someone</font><font color="#CCCCCC"> I can feel their</font>
 
 21
-000:000:52,800 --> 000:000:55,660
-♫ 'Cos you don't look the same... ♫
+000:001:44,340 --> 000:001:50,730
+feelings<font color="#E5E5E5"> you feel yeah yeah I guess yeah</font>
 
 22
-000:000:56,520 --> 000:000:59,100
-♫ The way you did before... ♫
+000:001:48,600 --> 000:001:55,820
+I feel a general unselfish love for just
 
 23
-000:000:59,300 --> 000:001:00,980
-- Screw you, spaceship!
+000:001:50,730 --> 000:001:59,190
+<font color="#E5E5E5">muttered</font><font color="#CCCCCC"> no sexual</font><font color="#E5E5E5"> no no I don't know</font>
 
 24
-000:001:02,520 --> 000:001:04,860
-♫ Fox on the run... ♫
+000:001:55,820 --> 000:002:00,210
+<font color="#CCCCCC">haha see you</font><font color="#E5E5E5"> saw everyone your deepest</font>
 
 25
-000:001:04,860 --> 000:001:09,980
-♫ You scream and everyone comes a-running... ♫
+000:001:59,190 --> 000:002:01,560
+darkest secret
 
 26
-000:001:09,980 --> 000:001:11,300
-♫ Take a run- ♫
+000:002:00,210 --> 000:002:04,790
+dude<font color="#E5E5E5"> come on</font><font color="#CCCCCC"> I think you're</font><font color="#E5E5E5"> overreacting</font>
 
 27
-000:001:11,740 --> 000:001:12,860
-- Does anyone have any tape out there?
+000:002:01,560 --> 000:002:13,550
+a little you must be so advanced
 
 28
-000:001:12,860 --> 000:001:14,880
-I wanna put some tape over the death button.
+000:002:04,790 --> 000:002:16,740
+<font color="#CCCCCC">hahahahaha Mickey</font><font color="#E5E5E5"> dimension ready yes I</font>
 
 29
-000:001:15,380 --> 000:001:16,520
-- Nobody has any tape!
+000:002:13,550 --> 000:002:19,500
+am a<font color="#E5E5E5"> dancer Cory's not you just need to</font>
 
 30
-000:001:16,520 --> 000:001:18,540
-- Not a single person has tape?!
+000:002:16,740 --> 000:002:24,140
+find a<font color="#E5E5E5"> woman who is pathetic like you</font>
 
 31
-000:001:18,740 --> 000:001:20,500
-- You have an atomic bomb in your bag,
-
-32
-000:001:20,500 --> 000:001:22,260
-If anyone's gonna have tape, it's YOU!
-
-33
-000:001:22,260 --> 000:001:23,440
-- I have to do EVERYTHING!
-
-34
-000:001:23,480 --> 000:001:24,920
-- You are wasting A LOT OF TIME!
-
-35
-000:001:24,920 --> 000:001:28,680
-- I. AM. GROOOTTT!!!
-
-36
-000:001:29,600 --> 000:001:30,780
-- That's a really bad sign.
-
-37
-000:001:33,000 --> 000:001:40,020
-♫ -Fox on the run, and hideaway~~~ ♫
-
-38
-000:001:41,660 --> 000:001:43,020
-- If I touch someone,
-
-39
-000:001:43,140 --> 000:001:44,900
-I can feel their feelings.
-
-40
-000:001:45,440 --> 000:001:47,540
-You feel... LOVE.
-
-41
-000:001:47,780 --> 000:001:50,660
-- Yeah, I guess- yeah. I feel uh, general, unselfish lovers but every-
-
-42
-000:001:50,700 --> 000:001:51,220
-- No!
-
-43
-000:001:51,220 --> 000:001:51,720
-No I don't.
-
-44
-000:001:51,720 --> 000:001:52,440
-Sexual LOVE.
-
-45
-000:001:52,440 --> 000:001:52,940
-- No...
-
-46
-000:001:52,940 --> 000:001:53,440
-No I don't...
-
-47
-000:001:53,440 --> 000:001:54,080
-- For HER!
-
-48
-000:001:54,140 --> 000:001:54,640
-- No!
-
-49
-000:001:56,000 --> 000:001:57,440
-- [Drax laughs]
-
-50
-000:001:57,440 --> 000:002:00,440
-She just told everyone your deepest, darkest secret!
-
-51
-000:002:00,440 --> 000:002:02,740
-- Dude, come on! I think you're overreacting a little bit.
-
-52
-000:002:02,760 --> 000:002:04,680
-- You must be so EMBARRASSED!
-
-53
-000:002:04,940 --> 000:002:06,800
-AHAHA, AHAHA...
-
-54
-000:002:06,800 --> 000:002:08,700
-Do me! Do me! Do me!
+000:002:19,500 --> 000:002:24,140
+thanks boy<font color="#E5E5E5"> do you need</font><font color="#CCCCCC"> a hug</font>

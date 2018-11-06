@@ -1,143 +1,135 @@
 1
-000:000:00,000 --> 000:000:08,519
-<font color="#E5E5E5">hmm ladies and gentlemen I've traveled</font>
+000:000:06,020 --> 000:000:11,670
+ladies and gentlemen I've traveled to
 
 2
-000:000:07,049 --> 000:000:10,559
-to over<font color="#E5E5E5"> half our state to</font><font color="#CCCCCC"> be here</font>
+000:000:09,599 --> 000:000:13,679
+over<font color="#E5E5E5"> half our state to be</font><font color="#CCCCCC"> here tonight I</font>
 
 3
-000:000:08,519 --> 000:000:12,179
-tonight<font color="#CCCCCC"> I couldn't get away sooner</font>
+000:000:11,670 --> 000:000:15,630
+couldn't get away sooner because<font color="#E5E5E5"> my new</font>
 
 4
-000:000:10,559 --> 000:000:14,719
-because<font color="#E5E5E5"> my new well was coming in at</font>
+000:000:13,679 --> 000:000:17,210
+well was coming in at coyote Hills and I
 
 5
-000:000:12,179 --> 000:000:16,800
-coyote Hills and I had to see<font color="#CCCCCC"> about it</font>
+000:000:15,630 --> 000:000:19,320
+<font color="#CCCCCC">have to see about</font><font color="#E5E5E5"> it</font>
 
 6
-000:000:14,719 --> 000:000:21,359
-ladies and<font color="#E5E5E5"> gentlemen if I say I'm an</font>
+000:000:17,210 --> 000:000:23,850
+<font color="#E5E5E5">ladies and gentlemen if I say I'm an</font>
 
 7
-000:000:16,800 --> 000:000:24,000
-<font color="#CCCCCC">oilman you will agree I'm a family man I</font>
+000:000:19,320 --> 000:000:26,519
+oilman you will agree<font color="#E5E5E5"> I'm a family man</font><font color="#CCCCCC"> I</font>
 
 8
-000:000:21,359 --> 000:000:26,880
-run a family<font color="#E5E5E5"> business</font><font color="#CCCCCC"> this is my son of</font>
+000:000:23,850 --> 000:000:29,400
+run a family business<font color="#CCCCCC"> this is my</font><font color="#E5E5E5"> son</font><font color="#CCCCCC"> and</font>
 
 9
-000:000:24,000 --> 000:000:28,650
-my partner<font color="#E5E5E5"> HW Plainview</font><font color="#CCCCCC"> you boys are a</font>
+000:000:26,519 --> 000:000:31,170
+my partner HW Plainview<font color="#E5E5E5"> you boys are a</font>
 
 10
-000:000:26,880 --> 000:000:29,640
+000:000:29,400 --> 000:000:32,130
 regular family business<font color="#CCCCCC"> oh you have a</font>
 
 11
-000:000:28,650 --> 000:000:32,309
-great chance<font color="#CCCCCC"> here</font>
+000:000:31,170 --> 000:000:34,890
+great<font color="#CCCCCC"> chance here</font>
 
 12
-000:000:29,640 --> 000:000:34,890
-my son<font color="#E5E5E5"> is a healer and a vessel for</font><font color="#CCCCCC"> the</font>
+000:000:32,130 --> 000:000:37,410
+my son is a healer and a vessel for<font color="#CCCCCC"> the</font>
 
 13
-000:000:32,309 --> 000:000:39,719
+000:000:34,890 --> 000:000:42,030
 <font color="#CCCCCC">Holy Spirit he</font><font color="#E5E5E5"> has a church you will be</font>
 
 14
-000:000:34,890 --> 000:000:44,370
-cast up at the<font color="#E5E5E5"> rock</font><font color="#CCCCCC"> I'm fixed like no</font>
+000:000:37,410 --> 000:000:46,110
+cast<font color="#E5E5E5"> up I'm fixed like no other company</font>
 
 15
-000:000:39,719 --> 000:000:46,050
-other company<font color="#E5E5E5"> in this field I have a</font>
+000:000:42,030 --> 000:000:48,870
+in<font color="#CCCCCC"> this field I have a string of tools</font>
 
 16
-000:000:44,370 --> 000:000:48,930
-string of tools<font color="#E5E5E5"> ready to put to work</font>
+000:000:46,110 --> 000:000:51,360
+ready to put to<font color="#E5E5E5"> work that's why I can</font>
 
 17
-000:000:46,050 --> 000:000:51,030
-that's why I can guarantee you to start
+000:000:48,870 --> 000:000:53,100
+guarantee<font color="#CCCCCC"> to start drilling and to put</font>
 
 18
-000:000:48,930 --> 000:000:54,520
-drilling and to put up the<font color="#E5E5E5"> cash to back</font>
+000:000:51,360 --> 000:000:56,000
+up the<font color="#E5E5E5"> cash to back my word</font>
 
 19
-000:000:51,030 --> 000:000:57,300
-my word<font color="#CCCCCC"> I saw you later</font>
+000:000:53,100 --> 000:000:58,220
+I assure<font color="#CCCCCC"> you ladies and gentlemen</font>
 
 20
-000:000:54,520 --> 000:000:59,950
-<font color="#CCCCCC">I don't want the others promised to do</font>
+000:000:56,000 --> 000:001:00,680
+no matter what the others<font color="#CCCCCC"> promise to do</font>
 
 21
-000:000:57,300 --> 000:001:05,830
-it comes to the showdown<font color="#CCCCCC"> they won't be</font>
+000:000:58,220 --> 000:001:03,130
+when it comes<font color="#CCCCCC"> to the showdown they</font><font color="#E5E5E5"> won't</font>
 
 22
-000:000:59,950 --> 000:001:09,480
-there<font color="#E5E5E5"> the whole ocean of oil</font><font color="#CCCCCC"> under</font><font color="#E5E5E5"> our</font>
+000:001:00,680 --> 000:001:03,130
+be there
 
 23
-000:001:05,830 --> 000:001:12,729
-feet<font color="#E5E5E5"> no one can get at it except</font><font color="#CCCCCC"> for me</font>
+000:001:04,870 --> 000:001:10,990
+the whole<font color="#CCCCCC"> notion</font><font color="#E5E5E5"> of warning under</font><font color="#CCCCCC"> our</font>
 
 24
-000:001:09,480 --> 000:001:14,710
-<font color="#E5E5E5">we'll offer</font><font color="#CCCCCC"> 150,000 for full title</font><font color="#E5E5E5"> when</font>
+000:001:07,340 --> 000:001:14,240
+feet<font color="#E5E5E5"> no one can get at</font><font color="#CCCCCC"> it except for</font><font color="#E5E5E5"> me</font>
 
 25
-000:001:12,729 --> 000:001:17,020
-do<font color="#E5E5E5"> we get</font><font color="#CCCCCC"> our money</font><font color="#E5E5E5"> do you</font>
+000:001:10,990 --> 000:001:16,160
+<font color="#E5E5E5">we'll offer 150,000 for full title when</font>
 
 26
-000:001:14,710 --> 000:001:19,350
-I look at<font color="#CCCCCC"> people and I see</font><font color="#E5E5E5"> nothing worth</font>
+000:001:14,240 --> 000:001:18,500
+do we get<font color="#E5E5E5"> our</font><font color="#CCCCCC"> money do you</font>
 
 27
-000:001:17,020 --> 000:001:19,350
-liking
+000:001:16,160 --> 000:001:27,920
+I look at<font color="#CCCCCC"> people and I see nothing</font><font color="#E5E5E5"> wants</font>
 
 28
-000:001:21,290 --> 000:001:27,950
-don't bully me Daniel please<font color="#CCCCCC"> I see the</font>
+000:001:18,500 --> 000:001:31,280
+<font color="#E5E5E5">liking</font><font color="#CCCCCC"> I see the worst in people we have</font>
 
 29
-000:001:24,830 --> 000:001:30,590
-worst<font color="#E5E5E5"> in people</font><font color="#CCCCCC"> we have a sinner with us</font>
+000:001:27,920 --> 000:001:34,040
+a sinner<font color="#E5E5E5"> with us yeah double your devil</font>
 
 30
-000:001:27,950 --> 000:001:32,930
-<font color="#E5E5E5">get out</font><font color="#CCCCCC"> dump</font><font color="#E5E5E5"> your devil</font><font color="#CCCCCC"> I have a</font>
+000:001:31,280 --> 000:001:43,430
+<font color="#CCCCCC">I have a</font><font color="#E5E5E5"> competition in me I want no one</font>
 
 31
-000:001:30,590 --> 000:001:42,350
-competition<font color="#E5E5E5"> in me I want no one else to</font>
+000:001:34,040 --> 000:001:50,440
+else<font color="#E5E5E5"> to succeed I can't keep doing this</font>
 
 32
-000:001:32,930 --> 000:001:44,380
-succeed<font color="#CCCCCC"> I can't keep doing</font><font color="#E5E5E5"> this on</font><font color="#CCCCCC"> my</font>
+000:001:43,430 --> 000:001:50,440
+on<font color="#E5E5E5"> my</font><font color="#CCCCCC"> own with these</font>
 
 33
-000:001:42,350 --> 000:001:44,380
-own
+000:001:51,860 --> 000:001:54,700
+people
 
 34
-000:001:45,730 --> 000:001:54,610
-with these people
-
-35
-000:001:52,610 --> 000:001:54,610
-ah
-
-36
-000:002:21,500 --> 000:002:23,560
+000:002:06,150 --> 000:002:08,210
 you
