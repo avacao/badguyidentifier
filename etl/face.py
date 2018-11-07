@@ -4,7 +4,7 @@ Face identification and comparison in videos
 
 import commons
 import face_recognition
-import cv2, os, sys
+import cv2, os, sys, shutil
 
 FACE_FILTER_AREA_RATIO_LOWER_BOUND = 1.0 / 160
 FACE_FILTER_AREA_GROUP_RATIO_LOWER_BOUND = 1.0 / 80
@@ -242,18 +242,51 @@ def face_clustering(movies):
 			print("Movie <{}> {} face clustering done.".format(imdb_id, movie.name))
 
 
-SAMPLE_FRAME_RATE = 5
+############ IMAGE PREPROCESSING ############
+
+SAMPLE_FRAME_RATE = 6
+
+def format_image_filename(imdb_id, char_index, timestamp):
+	return "{}-{}-{}.jpg".format(imdb_id, char_index, timestamp)
+
+def get_temp_images_dir(imdb_id):
+	return commons.IMAGE_DIR + imdb_id + '/'
+
+"""
+If this movie has completed images preprocess.
+If yes, return True, otherwise, cleanup previous record and start fresh
+"""
+def images_completed(imdb_id):
+	# already succeeded
+	if os.path.exists(commons.IMAGE_DONE_DIR + imdb_id):
+		return True
+
+	# parially done
+	if os.path.exists(get_temp_images_dir(imdb_id)):
+		shutil.rmtree(get_temp_images_dir(imdb_id))
+
+	# make new temp directory
+	os.mkdir(get_temp_images_dir(imdb_id))
+
+	return False
 
 def save_images(movies):
 	errors = []
+	commons.create_images_dir_if_not_exists()
 
-	#for imdb_id in movies:
-	for imdb_id in ['tt3501632']:
+	for imdb_id in movies:
 		movie = movies[imdb_id]
+		print("save images for <{}> {}...".format(imdb_id, movie.name))
+
+		if images_completed(imdb_id):
+			print("Already done.".format(imdb_id, movie.name))
+			continue
 
 		try:
 			input_movie = cv2.VideoCapture(commons.get_video_path(imdb_id))
 			characters = commons.get_characters(imdb_id)
+			temp_image_dir = get_temp_images_dir(imdb_id)
+
 		except Exception as e:
 			errors.append(e)
 			continue
@@ -271,43 +304,50 @@ def save_images(movies):
 			cv2.destroyAllWindows()
 			continue
 
-		i = -1
+		frame_i = -1
 		while True:
 			ret, bgr_frame = input_movie.read()
-			i += 1
+			frame_i += 1
 
 			if not ret:
 				break
 
 			# only sample 1 out of every 4 frames
-			if i % SAMPLE_FRAME_RATE != 0:
+			if frame_i % SAMPLE_FRAME_RATE != 0:
 				continue
 
-			print("At frame {} / {} ...".format(i, frame_count),end="\r")
+			print("At frame {} / {} ...".format(frame_i, frame_count), end="\r")
 
 			# face recognition
 			rgb_frame = bgr_frame[:,:,::-1]
-			face_locations = face_recognition.face_locations(rgb_frame)
-			face_locations = filter_face(face_locations, height * width)
+			encodings = face_recognition.face_encodings(rgb_frame)
 
-			# compare face with known characters
-			for j in range(len(face_locations)):
-				top, right, bottom, left = face_locations[j]
-				face = rgb_frame[top:bottom, left:right]
-				encoding = face_recognition.face_encodings(face)[0]
-
+			# compare each face encoding with main characters encodings
+			for encoding in encodings:
 				char_index = -1
 				for i in range(len(characters)):
-					result = face_recognition.compare_faces([x[1] for x in other_cluster], encoding)
+					result = face_recognition.compare_faces(characters[i], encoding)
+					if is_same_person(result):
+						char_index = i 
+						break
 
-
-				cv2.imwrite(face_dir + "{}.jpg".format(face_count), face)
-				face_count += 1
-
-			
+				if char_index > -1:
+					# valid image! save image with desired format
+					image_filename = temp_image_dir + \
+						format_image_filename(imdb_id, char_index, input_movie.get(cv2.CAP_PROP_POS_MSEC))
+					cv2.imwrite(image_filename, bgr_frame)
 
 		print(" Done.")
-		open(os.path.join(face_dir, '_SUCCESS'), "a").close() # mark success
+
+		# move all images out of temp_image_dir to IMAGE_DIR, delete temp dir, mark success
+		for file in os.listdir(temp_image_dir):
+			filename, extension = os.path.splitext(file)
+			if extension == ".jpg":
+				shutil.move(os.path.join(temp_image_dir, file), os.path.join(commons.IMAGE_DIR, file))
+		shutil.rmtree(temp_image_dir)
+		open(os.path.join(commons.IMAGE_DONE_DIR, imdb_id), "a").close()
+
+		# cleanup
 		input_movie.release()
 		cv2.destroyAllWindows()
 
