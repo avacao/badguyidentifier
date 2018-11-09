@@ -24,4 +24,4 @@ Milestone 1 - COMPLETED - [2018/09/01 - 2018/09/09]
 Milestone 2 - ONGOING - [2018/09/12 - ] 
 - Face recognition for each trailer, and clustered them into main characters.
 	- Main characters identification: 100% recall. Within each chracter, internal face precision ~100%, recall ~90%.
-- Manually label each trailer's main character as GOOD / BAD / UNCERTAIN
+- Manually label each trailer's main character as GOOD / BAD / N (unknown/neutral)
