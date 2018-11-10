@@ -76,7 +76,6 @@ def prepare_images():
 
 				for i in range(len(face_locations)):
 					try:
-						found = False
 						result = face_recognition.compare_faces(character_encodings[character_id], encodings[i])
 						if face.is_same_person(result):
 							height, _ , _ = image.shape
@@ -90,10 +89,6 @@ def prepare_images():
 
 							rect_image = image[0: height, x0:x1]
 							cv2.imwrite(os.path.join(commons.TRAIN_IMAGES_DIR, x), rect_image)
-							found = True
-
-						if not found:
-							os.remove(os.path.join(commons.IMAGE_DIR, x))
 
 					except Exception as e:
 						print("ERROR {}".format(e))
