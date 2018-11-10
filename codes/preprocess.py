@@ -57,12 +57,16 @@ def prepare_images():
 
 		for character_id in imagesof[imdb_id]:
 			for x in imagesof[imdb_id][character_id]:
-				image = cv2.imread(os.path.join(commons.IMAGE_DIR, x))
-				image = remove_black_edge(image)
+				try:
+					image = cv2.imread(os.path.join(commons.IMAGE_DIR, x))
+					image = remove_black_edge(image)
 
-				rgb_image = image[:,:,::-1]
-				face_locations = face_recognition.face_locations(rgb_image)
-				encodings = face_recognition.face_encodings(rgb_image, known_face_locations=face_locations)
+					rgb_image = image[:,:,::-1]
+					face_locations = face_recognition.face_locations(rgb_image)
+					encodings = face_recognition.face_encodings(rgb_image, known_face_locations=face_locations)
+				except Exception:
+					print("ERROR {}".format(e))
+					errors.append(e)
 
 				for i in range(len(face_locations)):
 					try:
@@ -85,6 +89,9 @@ def prepare_images():
 
 	for e in errors:
 		print(e)
+
+def generate_train_and_test():
+	movies = commons.load_movies()
 
 
 if __name__ == "__main__":
