@@ -34,6 +34,9 @@ def prepare_images():
 	if not os.path.exists(commons.TRAIN_IMAGES_DIR):
 		os.mkdir(commons.TRAIN_IMAGES_DIR)
 
+	if not os.path.exists(commons.TRAIN_IMAGES_DONE_DIR):
+		os.mkdir(commons.TRAIN_IMAGES_DONE_DIR)
+
 	movies = commons.load_movies()
 	images =  [ x for x in sorted(os.listdir(commons.IMAGE_DIR)) if len(x) > 4 and x[-4:] == ".jpg" ]
 	errors = []
@@ -53,6 +56,9 @@ def prepare_images():
 	# 2. locate face for each image with black edge cropped
 	for imdb_id in imagesof:
 		print("Prepare images for <{}> {}...".format(imdb_id, movies[imdb_id].name))
+		if os.path.exists(os.path.join(commons.TRAIN_IMAGES_DONE_DIR, imdb_id)):
+			continue
+
 		character_encodings = commons.get_characters(imdb_id)
 
 		for character_id in imagesof[imdb_id]:
@@ -70,6 +76,7 @@ def prepare_images():
 
 				for i in range(len(face_locations)):
 					try:
+						found = False
 						result = face_recognition.compare_faces(character_encodings[character_id], encodings[i])
 						if face.is_same_person(result):
 							height, _ , _ = image.shape
@@ -83,9 +90,16 @@ def prepare_images():
 
 							rect_image = image[0: height, x0:x1]
 							cv2.imwrite(os.path.join(commons.TRAIN_IMAGES_DIR, x), rect_image)
+							found = True
+
+						if not found:
+							os.remove(os.path.join(commons.IMAGE_DIR, x))
+
 					except Exception as e:
 						print("ERROR {}".format(e))
 						errors.append(e)
+
+		open(os.path.join(commons.TRAIN_IMAGES_DONE_DIR, imdb_id), "a").close()
 
 	for e in errors:
 		print(e)
