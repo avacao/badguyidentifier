@@ -8,10 +8,15 @@ MOVIES_PATH = DATA_DIR + "keyvalue.pkl"
 VIDEO_DIR = DATA_DIR + "videos/"
 CAPTION_DIR = DATA_DIR + "captions/"
 FACES_DIR = DATA_DIR + "faces/"
+
 IMAGE_DIR = DATA_DIR + "images/"
 IMAGE_DONE_DIR = IMAGE_DIR + '_DONE/'
+
 TRAIN_IMAGES_DIR = DATA_DIR + "train_images/"
 TRAIN_IMAGES_DONE_DIR = TRAIN_IMAGES_DIR + '_DONE/'
+
+TRAIN_FILE = DATA_DIR + "train.txt"
+TEST_FILE = DATA_DIR + "test.txt"
 
 """
 Returns: dictionary {imdb_id -> movie object}
