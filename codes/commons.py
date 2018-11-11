@@ -27,6 +27,8 @@ BASELINE_TEST_X = BASELINE_DIR + 'test_x.pickle'
 BASELINE_TEST_Y = BASELINE_DIR + 'test_y.pickle'
 BASELINE_TEST_WHO = BASELINE_DIR + 'test_who.txt'
 
+FEATURES_DIR = os.path.join(DATA_DIR, "features")
+
 """
 Returns: dictionary {imdb_id -> movie object}
 """
