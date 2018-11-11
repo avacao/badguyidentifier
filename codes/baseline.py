@@ -160,8 +160,12 @@ Accept:
 X: flattened vgg16 last non-fully-connected layer
 Y: GOOD = 0, BAD = 1
 """
-def train_baseline():
-	train_x, train_y = load_training_data()
+def train(data=None, model_path=commons.BASELINE_MODEL):
+	if data is None:
+		train_x, train_y = load_training_data()
+	else:
+		train_x, train_y = data
+
 	train_x, train_y = transform_x_y(train_x, train_y)
 	train_x, train_y = shuffle_train(train_x, train_y)
 
@@ -175,14 +179,17 @@ def train_baseline():
 	f1_score(result, train_y)
 
 	from sklearn.externals import joblib
-	joblib.dump(svm, commons.BASELINE_MODEL) 
+	joblib.dump(svm, model_path) 
 	print("Model saved.")
 
-def test_baseline():
+def test(data=None, model_path=commons.BASELINE_MODEL):
 	from sklearn.externals import joblib
-	svm = joblib.load(commons.BASELINE_MODEL) 
+	svm = joblib.load(model_path) 
 
-	test_x, test_y, test_who = load_test_data()
+	if data is None:
+		test_x, test_y, test_who = load_test_data()
+	else:
+		test_x, test_y, test_who = data
 	test_x, test_y = transform_x_y(test_x, test_y)
 
 	result = svm.predict(test_x)
@@ -222,13 +229,12 @@ def test_baseline():
 		count += len(resultof[imdb_id])
 
 		for character_id in resultof[imdb_id]:
-			true_label = (label[imdb_id][character_id] == "BAD")
-			count_by_type[true_label] += 1
+			count_by_type[LABEL_TO_DIGIT[label[imdb_id][character_id]]] += 1
 
 	print("accuracy by actor: {}/{}".format(correct, count))
 	for i in DIGITS:
 		print("accuracy by actor type {}: {}/{}".format(i, correct_by_type[i], count_by_type[i]))
 
 if __name__ == '__main__':
-	train_baseline()
-	test_baseline()
+	train()
+	test()
