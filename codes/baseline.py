@@ -217,7 +217,7 @@ def test(data=None, model_path=commons.BASELINE_MODEL):
 	count_by_type = defaultdict(int)
 	for imdb_id in resultof:
 		for character_id in resultof[imdb_id]:
-			true_label = (label[imdb_id][character_id] == "BAD")
+			true_label = LABEL_TO_DIGIT[label[imdb_id][character_id]]
 			count = len([ x for x in resultof[imdb_id][character_id] if x == true_label ])
 			if count >= len(resultof[imdb_id][character_id]) / 2:
 				correct += 1
