@@ -133,6 +133,28 @@ def transform_x_y(x, y):
 	y = [ LABEL_TO_DIGIT[item] for item in y ]
 	return x, y
 
+def naive_accuracy(result, actual):
+	assert(len(result) == len(actual))
+	count = sum([ 1 for i in range(len(result)) if result[i] == actual[i] ])
+	print("Naive accuracy {}/{}".format(count, len(result)))
+
+	correct_by_type = defaultdict(int)
+	count_by_type = defaultdict(int)
+	for i in range(len(result)):
+		if result[i] == actual[i]:
+			correct_by_type[result[i]] += 1
+
+	for digit in actual:
+		count_by_type[digit] += 1	
+
+	for i in DIGITS:
+		print("Naive accuracy type {} {}/{}".format(i, correct_by_type[i], count_by_type[i]))
+	print()
+
+def f1_score(result, actual):
+	score = sklearn.metrics.f1_score(actual, result, average='weighted')
+	print("f1-score: {}\n".format(score))
+
 """
 Accept: 
 X: flattened vgg16 last non-fully-connected layer
@@ -143,9 +165,14 @@ def train_baseline():
 	train_x, train_y = transform_x_y(train_x, train_y)
 	train_x, train_y = shuffle_train(train_x, train_y)
 
-	svm = SVC(gamma='auto', class_weight='balanced', verbose=True)
+	svm = SVC(kernel='linear', class_weight='balanced', verbose=True, max_iter=15)
+	print("\n==============================")
 	print("Training SVM...")
 	svm.fit(train_x, train_y)
+
+	result = svm.predict(train_x)
+	naive_accuracy(result, train_y)
+	f1_score(result, train_y)
 
 	from sklearn.externals import joblib
 	joblib.dump(svm, commons.BASELINE_MODEL) 
@@ -162,20 +189,10 @@ def test_baseline():
 	assert(len(result) == len(test_y))
 
 	# 1. naive accuracy
-	correct = 0
-	correct_by_type = defaultdict(int)
-	count_by_type = defaultdict(int)
-	for i in range(len(result)):
-		if result[i] == test_y[i]:
-			correct += 1
-			correct_by_type[result[i]] += 1
-
-	for digit in test_y:
-		count_by_type[digit] += 1
-
-	print("naive accuracy: {}/{}".format(correct, len(result)))
-	for i in DIGITS:
-		print("naive accuracy type {}: {}/{}".format(i, correct_by_type[i], count_by_type[i]))
+	print("\n==============================")
+	print("Test accuracy: ")
+	naive_accuracy(svm.predict(test_x), test_y)
+	f1_score(result, test_y)
 
 	# 2. majority voting accuracy
 	resultof = defaultdict(lambda: defaultdict(list))
