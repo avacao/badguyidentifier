@@ -2,6 +2,8 @@ credentials.py
 etl/temp.py
 
 venv
+_DONE/
+baseline/
 
 *.pyc
 *.avi
