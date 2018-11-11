@@ -8,4 +8,9 @@ venv
 *.mp4 
 *.jpg
 
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+
 !/.gitignore
