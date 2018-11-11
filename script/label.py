@@ -30,17 +30,17 @@ def get_movie_folders():
 def tag(movie):
 	url, faces = parse_success(movie)
 
-	print('Working on movie', movie, "...")
-	input('Press Enter to open video in browser...')
+	print(('Working on movie', movie, "..."))
+	eval(input('Press Enter to open video in browser...'))
 	webbrowser.open(url)
 	
-	input('Press Enter to start labelling...')
+	eval(input('Press Enter to start labelling...'))
 	if not os.path.exists(os.path.join(FACE_DIR, movie, TIER_FILE)):
 		write_to_tier(movie)
 
 	labels = []
 	for idx, pics in enumerate(faces):
-		print('Showing pics for character {} ...'.format(idx))
+		print(('Showing pics for character {} ...'.format(idx)))
 
 		for idx, pic in enumerate(pics):
 			show_pic(pic)
@@ -61,34 +61,34 @@ def tag(movie):
 
 def write_to_tier(movie):
 	path = os.path.join(FACE_DIR, movie, TIER_FILE)
-	tier = input('Enter the tier for this movie:')
+	tier = eval(input('Enter the tier for this movie:'))
 	while tier not in TIERS:
-		tier = input('Reenter the tier for this movie, only EASY, MEDIUM, HARD are accepted:')
+		tier = eval(input('Reenter the tier for this movie, only EASY, MEDIUM, HARD are accepted:'))
 
 	with open(os.path.abspath(path), "w") as f:
 		f.write(tier)
 
-	print(path, 'saved')
+	print((path, 'saved'))
 
 def write_to_label(movie, labels):
 	path = os.path.join(FACE_DIR, movie, LABEL_FILE)
 	with open(os.path.abspath(path), "w") as f:
 		f.write('\n'.join(labels))
 
-	print(path, 'saved')
+	print((path, 'saved'))
 
 def show_pic(pic):
 	webbrowser.open('file://' + os.path.abspath(pic))
 
 def ask_for_label():
-	print(OPTION_FORMAT.format(1, 'G', 'GOOD'))
-	print(OPTION_FORMAT.format(2, 'B', 'BAD'))
-	print(OPTION_FORMAT.format(3, 'N', 'Neutral'))
-	print(OPTION_FORMAT.format(4, 'NA', 'NOT APPLICABLE'))
+	print((OPTION_FORMAT.format(1, 'G', 'GOOD')))
+	print((OPTION_FORMAT.format(2, 'B', 'BAD')))
+	print((OPTION_FORMAT.format(3, 'N', 'Neutral')))
+	print((OPTION_FORMAT.format(4, 'NA', 'NOT APPLICABLE')))
 
 	# Loop to handle selections. Typing legal input to break out.
 	while True:
-		selection = input('Type your selection, or hit Enter to view next pic for this character:')
+		selection = eval(input('Type your selection, or hit Enter to view next pic for this character:'))
 
 		# Handle unknown input.
 		if selection not in LEGAL_SELECTION:
@@ -134,15 +134,15 @@ def parse_face(face, movie):
 def main():
 	print('Label helper for badguyidentifier')
 	print('\n***** CONFIG *****')
-	print('FACE_DIR =', FACE_DIR)
-	print('LABEL_FILE =', LABEL_FILE) 
-	print('IMDB_ID_PREFIX =', IMDB_ID_PREFIX)
+	print(('FACE_DIR =', FACE_DIR))
+	print(('LABEL_FILE =', LABEL_FILE)) 
+	print(('IMDB_ID_PREFIX =', IMDB_ID_PREFIX))
 	print('******************\n')
 	print('Start labelling...\n')
 	movies = get_movie_folders()
 	print(movies)
 
-	print(len(movies), 'movies found')
+	print((len(movies), 'movies found'))
 	for movie in movies:
 		tag(movie)
 
