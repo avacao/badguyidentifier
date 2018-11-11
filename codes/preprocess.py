@@ -100,8 +100,25 @@ def prepare_images():
 		print(e)
 
 def generate_train_and_test():
-	movies = commons.load_movies()
+	import random 
 
+	movies = commons.load_movies()
+	TEST_PERCENT = 0.2
+
+	test = random.sample(movies.keys(), int(TEST_PERCENT * len(movies)))
+	train = list(set(movies.keys()) - set(test))
+	
+	assert len(set(test).intersection(train)) == 0
+
+	with open(commons.TRAIN_FILE, 'w') as f:
+		for imdb_id in train:
+			f.write("{}\n".format(imdb_id))
+
+	with open(commons.TEST_FILE, 'w') as f:
+		for imdb_id in test:
+			f.write("{}\n".format(imdb_id))
+	
 
 if __name__ == "__main__":
-	prepare_images()
+	#prepare_images()
+	#generate_train_and_test()
