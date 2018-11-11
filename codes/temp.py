@@ -20,4 +20,4 @@ def count_labels():
 	print("Labeled movies: {}/{}".format(count, len(movies)))
 
 if __name__ == "__main__":
-	count_labels()
+	print(commons.get_label())

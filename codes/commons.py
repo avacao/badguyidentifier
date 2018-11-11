@@ -1,5 +1,6 @@
 import os, pickle
 import face_recognition
+from collections import defaultdict
 
 DATA_DIR = "../data/"
 
@@ -17,6 +18,14 @@ TRAIN_IMAGES_DONE_DIR = TRAIN_IMAGES_DIR + '_DONE/'
 
 TRAIN_FILE = DATA_DIR + "train.txt"
 TEST_FILE = DATA_DIR + "test.txt"
+
+BASELINE_DIR = DATA_DIR + "baseline/"
+BASELINE_MODEL = BASELINE_DIR + 'model.joblib'
+BASELINE_TRAIN_X = BASELINE_DIR + 'train_x.pickle'
+BASELINE_TRAIN_Y = BASELINE_DIR + 'train_y.pickle'
+BASELINE_TEST_X = BASELINE_DIR + 'test_x.pickle'
+BASELINE_TEST_Y = BASELINE_DIR + 'test_y.pickle'
+BASELINE_TEST_WHO = BASELINE_DIR + 'test_who.txt'
 
 """
 Returns: dictionary {imdb_id -> movie object}
@@ -107,3 +116,32 @@ def get_characters(imdb_id):
 		characters.append(encodings)
 
 	return characters
+
+"""
+return a dictionary : imdb_id -> character_id -> LABEL
+"""
+def get_label():
+	movies = load_movies()
+	labelof = defaultdict(dict)
+	labelset = set(['GOOD','BAD','N','NA'])
+
+	for imdb_id in movies:
+		for label_file in ['_LABEL{}'.format(i) for i in range(1,4)]:
+
+			if os.path.exists(os.path.join(FACES_DIR, imdb_id + '/' + label_file)):
+				with open(os.path.join(FACES_DIR, imdb_id + '/' + label_file), 'r') as f:
+					for line in f.readlines():
+						if len(line) > 2:
+							character_id, label = line.strip().split(':')
+							character_id = int(character_id)
+
+							# corner case
+							if len(label) > 6 and label[:6] == "SAMEAS":
+								labelof[imdb_id][character_id] = labelof[imdb_id][int(label[6:])]
+							else:
+								labelof[imdb_id][character_id] = label
+
+							assert(labelof[imdb_id][character_id] in labelset)
+				break
+
+	return labelof
