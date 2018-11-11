@@ -7,6 +7,9 @@ import os, commons, pickle
 from datetime import datetime
 from collections import defaultdict
 
+LABEL_TO_DIGIT = {'GOOD': 0 , 'BAD': 1, 'N': 2, 'NA':3 }
+DIGITS = [i for i in range(4)]
+
 """
 baseline data:
 image features come from the last non-fully-connected layer of vgg16.
@@ -125,8 +128,9 @@ def shuffle_train(train_x, train_y):
 	return train_x, train_y
 
 def transform_x_y(x, y):
-	x = [item.flatten() for item in x]
-	y = [ 1 if item == 'BAD' else 0 for item in y ]
+
+	x = [ item.flatten() for item in x ]
+	y = [ LABEL_TO_DIGIT[item] for item in y ]
 	return x, y
 
 """
@@ -136,12 +140,10 @@ Y: GOOD = 0, BAD = 1
 """
 def train_baseline():
 	train_x, train_y = load_training_data()
-
-	train_x = [item.flatten() for item in train_x]
-	train_y = [ 1 if item == 'BAD' else 0 for item in train_y ]
+	train_x, train_y = transform_x_y(train_x, train_y)
 	train_x, train_y = shuffle_train(train_x, train_y)
 
-	svm = SVC(gamma='auto', class_weight='balanced')
+	svm = SVC(gamma='auto', class_weight='balanced', verbose=True)
 	print("Training SVM...")
 	svm.fit(train_x, train_y)
 
@@ -161,15 +163,18 @@ def test_baseline():
 
 	# 1. naive accuracy
 	correct = 0
-	correct_by_type = [0, 0]
-	count_by_type = [len([ y for y in test_y if y == 0 ]), len([ y for y in test_y if y == 1 ])]
+	correct_by_type = defaultdict(int)
+	count_by_type = defaultdict(int)
 	for i in range(len(result)):
 		if result[i] == test_y[i]:
 			correct += 1
 			correct_by_type[result[i]] += 1
 
+	for digit in test_y:
+		count_by_type[digit] += 1
+
 	print("naive accuracy: {}/{}".format(correct, len(result)))
-	for i in range(len(correct_by_type)):
+	for i in DIGITS:
 		print("naive accuracy type {}: {}/{}".format(i, correct_by_type[i], count_by_type[i]))
 
 	# 2. majority voting accuracy
@@ -184,8 +189,8 @@ def test_baseline():
 		
 	# 2.2 majority vote
 	correct = 0
-	correct_by_type = [0, 0]
-	count_by_type = [0, 0]
+	correct_by_type = defaultdict(int)
+	count_by_type = defaultdict(int)
 	for imdb_id in resultof:
 		for character_id in resultof[imdb_id]:
 			true_label = (label[imdb_id][character_id] == "BAD")
@@ -204,10 +209,9 @@ def test_baseline():
 			count_by_type[true_label] += 1
 
 	print("accuracy by actor: {}/{}".format(correct, count))
-	for i in range(len(correct_by_type)):
+	for i in DIGITS:
 		print("accuracy by actor type {}: {}/{}".format(i, correct_by_type[i], count_by_type[i]))
 
 if __name__ == '__main__':
-	load_baseline_data()
 	train_baseline()
 	test_baseline()
