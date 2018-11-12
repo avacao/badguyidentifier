@@ -60,10 +60,10 @@ def generate_vggface_data():
 
 		# for each character, pick random 5 encodings as its datapoint
 		for i in range(len(characters)):
-			for encoding in character:
+			for encoding in characters[i]:
 				x = encoding.flatten()
 				y = labelof[imdb_id][i]
-				
+
 			# character = random.sample(characters[i], 5)
 			# x = numpy.array([ x.flatten() for x in character ])
 			# x.flatten()
