@@ -5,7 +5,7 @@ from sklearn.svm import SVC
 
 import os, commons, pickle
 from datetime import datetime
-from collections import defaultdict
+from collections import defaultdict, Counter
 
 LABEL_TO_DIGIT = {'GOOD': 0 , 'BAD': 1, 'N': 2, 'NA':3 }
 DIGITS = [i for i in range(4)]
@@ -155,6 +155,17 @@ def f1_score(result, actual):
 	score = sklearn.metrics.f1_score(actual, result, average='weighted')
 	print("f1-score: {}\n".format(score))
 
+def decide_y(result):
+	count = Counter(result)
+	if count[LABEL_TO_DIGIT['GOOD']] > 0.5:
+		return LABEL_TO_DIGIT['GOOD']
+
+	del count[LABEL_TO_DIGIT['GOOD']]
+	max_count = max(count.values())
+	for digit in count:
+		if count[digit] == max_count:
+			return digit
+
 """
 Accept: 
 X: flattened vgg16 last non-fully-connected layer
@@ -218,8 +229,7 @@ def test(data=None, model_path=commons.BASELINE_MODEL):
 	for imdb_id in resultof:
 		for character_id in resultof[imdb_id]:
 			true_label = LABEL_TO_DIGIT[label[imdb_id][character_id]]
-			count = len([ x for x in resultof[imdb_id][character_id] if x == true_label ])
-			if count >= len(resultof[imdb_id][character_id]) / 2:
+			if decide_y(resultof[imdb_id][character_id]) == true_label:
 				correct += 1
 				correct_by_type[true_label] += 1
 
