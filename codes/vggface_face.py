@@ -60,10 +60,14 @@ def generate_vggface_data():
 
 		# for each character, pick random 5 encodings as its datapoint
 		for i in range(len(characters)):
-			character = random.sample(characters[i], 5)
-			x = numpy.array([ x.flatten() for x in character ])
-			x.flatten()
-			y = labelof[imdb_id][i]
+			for encoding in character:
+				x = encoding.flatten()
+				y = labelof[imdb_id][i]
+				
+			# character = random.sample(characters[i], 5)
+			# x = numpy.array([ x.flatten() for x in character ])
+			# x.flatten()
+			# y = labelof[imdb_id][i]
 
 			if imdb_id in train_ids:
 				train_x.append(x)
