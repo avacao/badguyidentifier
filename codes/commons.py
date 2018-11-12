@@ -87,7 +87,7 @@ def open_faces_of_movie(imdb_id):
 	return faces
 
 """
-Returns a list, where index i = [ face_recognition images ] of character i
+Returns a list, where index i = [ face_recognition encodings ] of character i
 """
 def get_characters(imdb_id):
 	import ast
