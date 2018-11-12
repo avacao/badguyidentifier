@@ -48,7 +48,7 @@ def generate_vggface_data():
 	labelof = commons.get_label()
 
 	IMAGE_SIZE = 224
-	cnn_model = VGGFace(include_top=False, input_shape=(IMAGE_SIZE, IMAGE_SIZE, 3), pooling='avg')
+	cnn_model = VGGFace(include_top=False, input_shape=(IMAGE_SIZE, IMAGE_SIZE, 3), pooling='None')
 	print("Loading baseline data...", datetime.now())
 
 	image_filenames = [x for x in sorted(os.listdir(commons.TRAIN_IMAGES_DIR)) if len(x) > 4 and x[-4:] == '.jpg']
