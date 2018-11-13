@@ -52,9 +52,6 @@ def tag(movie):
 	webbrowser.open(url)
 	
 	input('Press Enter to start labelling...')
-	if not os.path.exists(os.path.join(FACE_DIR, movie, TIER_FILE)):
-		write_to_tier(movie)
-
 	labels = []
 	
 	for idx in range(len(faces)):
@@ -70,6 +67,9 @@ def tag(movie):
 				break
 
 	write_to_label(movie, labels)
+
+	if not os.path.exists(os.path.join(FACE_DIR, movie, TIER_FILE)):
+		write_to_tier(movie)
 
 def write_to_tier(movie):
 	path = os.path.join(FACE_DIR, movie, TIER_FILE)
