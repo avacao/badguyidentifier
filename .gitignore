@@ -4,6 +4,7 @@ etl/temp.py
 venv
 _DONE/
 baseline/
+data/features/
 
 *.pyc
 *.avi
