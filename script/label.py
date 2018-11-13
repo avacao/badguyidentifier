@@ -3,6 +3,8 @@ import os
 import sys
 import re
 import webbrowser
+import numpy, random
+from PIL import Image
 
 # command 'python3 ./label.py {label_id} {IMDB_id_prefix}'
 # label_id: required
@@ -21,11 +23,26 @@ OPTION_FORMAT = '\'{}\' or \'{}\' for \'{}\''
 
 LEGAL_SELECTION = {'', '1', '2', '3', '4', 'G', 'B', 'N', 'NA'}
 TIERS = {'EASY', 'MEDIUM', 'HARD'}
+LABEL_IDS = {1, 2, 3}
 
 def get_movie_folders():
-	return [name for name in os.listdir(FACE_DIR)
-			if os.path.isdir(os.path.join(FACE_DIR, name)) and name.startswith(IMDB_ID_PREFIX) and 
-				(not os.path.exists(os.path.join(FACE_DIR, name, LABEL_FILE)))]
+	imdb_ids = [name for name in sorted(os.listdir(FACE_DIR))
+			if os.path.isdir(os.path.join(FACE_DIR, name)) and name.startswith(IMDB_ID_PREFIX) and
+				os.path.exists(os.path.join(FACE_DIR, name, SUCCESS_FILE)) ]
+
+	unlabeled = [] # not yet labeled by anyone
+	unlabeled_by_me = [] # labeled by someone but not me
+	label_files = ['_LABEL{}'.format(x) for x in LABEL_IDS]
+
+	for imdb_id in imdb_ids:
+		if not os.path.exists(os.path.join(FACE_DIR, imdb_id, LABEL_FILE)):
+			if max([ os.path.exists(os.path.join(FACE_DIR, imdb_id, f)) for f in label_files ]) == 1:
+				unlabeled_by_me.append(imdb_id)
+			else:
+				unlabeled.append(imdb_id)
+
+	unlabeled.extend(unlabeled_by_me)
+	return unlabeled
 
 def tag(movie):
 	url, faces = parse_success(movie)
@@ -39,20 +56,15 @@ def tag(movie):
 		write_to_tier(movie)
 
 	labels = []
-	for idx, pics in enumerate(faces):
+	
+	for idx in range(len(faces)):
 		print('Showing pics for character {} ...'.format(idx))
+		show_character(faces[idx])
 
-		for idx, pic in enumerate(pics):
-			show_pic(pic)
+		while True:
 			label = ask_for_label()
 
-			# Rare case: If there is no more pic for this character, user must label.
-			while label == '' and idx == len(pics) - 1:
-				print('\nERROR: no more pic for this character.\n')
-				show_pic(pic)
-				label = ask_for_label()
-
-			# Label received, store it, and skip to the next character.
+			# Label received, store it, and go to the next character.
 			if label != '':
 				labels.append('{}:{}'.format(len(labels), label))
 				break
@@ -76,6 +88,23 @@ def write_to_label(movie, labels):
 		f.write('\n'.join(labels))
 
 	print(path, 'saved')
+
+"""
+INPUT: a list of image filenames of this character
+"""
+def show_character(faces):
+	num_samples = min(20, int(len(faces) / 5) * 5)
+	sampled_faces = random.sample(faces, num_samples) # filenames
+	sampled_faces = [ Image.open(face).resize((168, 168)) for face in sampled_faces ]
+	sampled_faces = [ numpy.asarray(face) for face in sampled_faces ]
+
+	rows = []
+	for i in range(0, len(sampled_faces), 5):
+		rows.append(numpy.concatenate( sampled_faces[i:i+5] , axis=1))
+	matrix = numpy.concatenate(rows, axis=0)
+
+	img = Image.fromarray(matrix)
+	img.show()
 
 def show_pic(pic):
 	webbrowser.open('file://' + os.path.abspath(pic))
