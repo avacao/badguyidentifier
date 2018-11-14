@@ -4,7 +4,8 @@
 | 61/278 | 4 | VGG16 on imagenet | linear | balanced | 50 | - | weighted | 0.649 | 0.327 | |
 | 61/278 | 4 | VGG16 on imagenet | linear | balanced | 75 |- | weighted | 0.709 | 0.365 | INDEX_1 |
 | 61/278 | 4 |VGG16 on imagenet | linear | balanced | 100 |- | weighted | 0.805 | 0.323 | BAD accuracy: 0.087 |
-| 61/278 | 4 |VGG16 face | linear | balanced | 150 |- | weighted | 0.563 | 0.352 | INDEX_2 |
+| 61/278 | 4 |VGG16 face | linear | balanced | 150 |- | weighted | 0.563 | 0.352 | INDEX_4 |
+| 99/278 | 4 | VGG16 face | linear | balanced | 125 |- | weighted | 0.647 | 0.350 | INDEX_5 |
 
 
 INDEX_1
@@ -121,4 +122,34 @@ accuracy by actor type 1: 2/7
 random f1 score: 0.2516468817633159
 all good f1 score: 0.25256016793971514
 weighted random f1 score: 0.297151904227101
+```
+
+INDEX_5
+
+```
+Naive accuracy 6919/10467
+Naive accuracy type 0 5116/7355
+Naive accuracy type 1 562/836
+Naive accuracy type 2 623/1386
+Naive accuracy type 3 618/890
+
+f1-score: 0.6740328201506157
+
+Model saved.
+
+==============================
+Test accuracy:
+Naive accuracy 1273/3445
+Naive accuracy type 0 903/1498
+Naive accuracy type 1 99/300
+Naive accuracy type 2 171/1058
+Naive accuracy type 3 100/589
+
+f1-score: 0.350148885425095
+
+accuracy by actor: 60/140
+accuracy by actor type 0: 56/57
+accuracy by actor type 1: 0/7
+accuracy by actor type 2: 0/36
+accuracy by actor type 3: 4/40
 ```
