@@ -7,6 +7,7 @@ DATA_DIR = "../data/"
 MOVIES_PATH = DATA_DIR + "keyvalue.pkl"
 
 VIDEO_DIR = DATA_DIR + "videos/"
+AUDIO_DIR = DATA_DIR + "audios/"
 CAPTION_DIR = DATA_DIR + "captions/"
 FACES_DIR = DATA_DIR + "faces/"
 

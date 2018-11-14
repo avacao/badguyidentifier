@@ -10,5 +10,6 @@ data/features/
 *.avi
 *.mp4 
 *.jpg
+*.wav
 
 !/.gitignore

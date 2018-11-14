@@ -1,6 +1,6 @@
 import commons, face
 import face_recognition
-import cv2, os, sys, pickle
+import cv2, os, sys, pickle, multiprocessing, subprocess
 from collections import defaultdict
 
 """
@@ -118,7 +118,32 @@ def generate_train_and_test():
 		for imdb_id in test:
 			f.write("{}\n".format(imdb_id))
 	
+def extract_audio_from_video_worker(imdb_id):
+	video_path = os.path.join(commons.VIDEO_DIR, "{}.mp4".format(imdb_id))
+	audio_path = os.path.join(commons.AUDIO_DIR, "{}.wav".format(imdb_id))
+	cmd = "ffmpeg -hide_banner -loglevel panic -i {} {}".format(video_path, audio_path)
+
+	if os.path.exists(video_path):
+		try:
+			subprocess.run(cmd, shell=True)
+			print("<{}> completed.".format(imdb_id))
+		except Exception as e:
+			print("ERROR <{}>: {}".format(imdb_id, e))
+
+
+def extract_audio_from_video():
+	movies = commons.load_movies()
+	print("Extract audio from video.")
+	print("Number of cores: {}".format(multiprocessing.cpu_count()))
+
+	if not os.path.exists(commons.AUDIO_DIR):
+		os.mkdir(commons.AUDIO_DIR)
+
+	pool = multiprocessing.Pool(multiprocessing.cpu_count())
+	pool.map(extract_audio_from_video_worker, movies.keys())
+
 
 if __name__ == "__main__":
-	#prepare_images()
 	#generate_train_and_test()
+	#prepare_images()
+	extract_audio_from_video()
