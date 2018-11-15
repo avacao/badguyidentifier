@@ -1,7 +1,9 @@
 import commons, face
 import face_recognition
-import cv2, os, sys, pickle, multiprocessing, subprocess
+import cv2, os, sys, pickle, multiprocessing, shutil, subprocess
 from collections import defaultdict
+
+#################### IMAGE PREPARATION ####################
 
 """
 INPUT: cv2 image
@@ -99,6 +101,8 @@ def prepare_images():
 	for e in errors:
 		print(e)
 
+#################### TRAIN & TEST ####################
+
 def generate_train_and_test():
 	import random 
 
@@ -118,6 +122,8 @@ def generate_train_and_test():
 		for imdb_id in test:
 			f.write("{}\n".format(imdb_id))
 	
+#################### AUDIO PREPROCESSING ####################
+
 def extract_audio_from_video_worker(imdb_id):
 	video_path = os.path.join(commons.VIDEO_DIR, "{}.mp4".format(imdb_id))
 	audio_path = os.path.join(commons.AUDIO_DIR, "{}.wav".format(imdb_id))
@@ -142,8 +148,86 @@ def extract_audio_from_video():
 	pool = multiprocessing.Pool(multiprocessing.cpu_count())
 	pool.map(extract_audio_from_video_worker, movies.keys())
 
+"""
+Find continuous frames in video that corresponds to one specific character.
+"""
+def is_the_same_scene(scene, timestamp):
+	if len(scene) > 0 and abs(scene[-1] - timestamp) > 500:
+		return False
+	return True
+
+def filter_scene(scenes):
+	return [ s for s in scenes if len(s) >= 5 ]
+
+def extract_audio_pieces_worker(imdb_id):
+	temp_audio_unit_path = os.path.join(commons.AUDIO_UNIT_DIR, imdb_id)
+
+	# 0. clean up work if exists
+	if os.path.exists(os.path.join(commons.AUDIO_UNIT_DONE_DIR, imdb_id)):
+		print("<{}> already completed.".format(imdb_id))
+		return
+	if os.path.exists(os.path.join(commons.AUDIO_UNIT_DIR, imdb_id)):
+		shutil.rmtree(temp_audio_unit_path)
+
+	# 1. create temp path and start working!
+	os.mkdir(temp_audio_unit_path)
+	frames = [ x for x in os.listdir(commons.TRAIN_IMAGES_DIR) if x.startswith(imdb_id) ]
+
+	timestampsof = defaultdict(list) # character_id -> timestamps
+	for frame in frames:
+		_, character_id, timestamp = frame[:-4].split('-')
+		character_id = int(character_id)
+		timestamp = float(timestamp)
+		timestampsof[character_id].append(timestamp)
+	for character_id in timestampsof:
+		timestampsof[character_id].sort()
+
+	scenes = defaultdict(list) # character_id -> [ scene0 = [ timestamp0 ... ] ]
+							   # timestamp is a float exactly what in train_image, in milisecond
+	curr_scene = []
+	for character_id in timestampsof:
+		for timestamp in timestampsof[character_id]:
+			if not is_the_same_scene(curr_scene, timestamp):
+				scenes[character_id].append(curr_scene)
+				curr_scene = []
+			curr_scene.append(timestamp)
+
+		scenes[character_id].append(curr_scene)
+		curr_scene = []
+
+	def print_scenes(scenes):
+		for character_id in scenes:
+			print("{}".format(len(scenes[character_id])), end=" + ")
+		print()
+			# print("character {}".format(character_id))
+			# for s in scenes[character_id]:
+			# 	print(s)
+			# print()
+
+	for character_id in scenes:
+		scenes[character_id] = filter_scene(scenes[character_id])
+
+	print("<{}> cooked scenes: {} = ".format(imdb_id, sum([len(s) for s in scenes.values()])), end=" ")
+	print_scenes(scenes)	
+
+
+def extract_audio_pieces():
+	movies = commons.load_movies()
+	print("Extract audio pieces...")
+
+	if not os.path.exists(commons.AUDIO_UNIT_DIR):
+		os.mkdir(commons.AUDIO_UNIT_DIR)
+	if not os.path.exists(commons.AUDIO_UNIT_DONE_DIR):
+		os.mkdir(commons.AUDIO_UNIT_DONE_DIR)
+
+	# pool = multiprocessing.Pool(multiprocessing.cpu_count())
+	# pool.map(extract_audio_from_video_worker, movies.keys())
+	#for imdb_id in movies:
+	for imdb_id in ['tt0264464', 'tt1843866', 'tt3501632']:
+		extract_audio_pieces_worker(imdb_id)
 
 if __name__ == "__main__":
 	#generate_train_and_test()
 	#prepare_images()
-	extract_audio_from_video()
+	#extract_audio_from_video()
+	extract_audio_pieces()
