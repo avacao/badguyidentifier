@@ -1,7 +1,10 @@
 import commons, face
-import face_recognition
-import cv2, os, sys, pickle, multiprocessing, subprocess
+import face_recognition, cv2, numpy
+from scipy.io import wavfile # for breaking audio files
+import os, sys, pickle, multiprocessing, shutil, subprocess
 from collections import defaultdict
+
+#################### IMAGE PREPARATION ####################
 
 """
 INPUT: cv2 image
@@ -99,6 +102,8 @@ def prepare_images():
 	for e in errors:
 		print(e)
 
+#################### TRAIN & TEST ####################
+
 def generate_train_and_test():
 	import random 
 
@@ -118,6 +123,8 @@ def generate_train_and_test():
 		for imdb_id in test:
 			f.write("{}\n".format(imdb_id))
 	
+#################### AUDIO PREPROCESSING ####################
+
 def extract_audio_from_video_worker(imdb_id):
 	video_path = os.path.join(commons.VIDEO_DIR, "{}.mp4".format(imdb_id))
 	audio_path = os.path.join(commons.AUDIO_DIR, "{}.wav".format(imdb_id))
@@ -142,8 +149,123 @@ def extract_audio_from_video():
 	pool = multiprocessing.Pool(multiprocessing.cpu_count())
 	pool.map(extract_audio_from_video_worker, movies.keys())
 
+"""
+Find continuous frames in video that corresponds to one specific character.
+"""
+def is_the_same_scene(scene, timestamp):
+	if len(scene) > 0 and abs(scene[-1] - timestamp) > 500:
+		return False
+	return True
+
+def filter_scene(scenes):
+	return [ s for s in scenes if len(s) >= 5 ]
+
+def generate_audio_features():
+	movies = commons.load_movies()
+	print("Extract audio pieces...")
+
+	# if not os.path.exists(commons.AUDIO_UNIT_DIR):
+	# 	os.mkdir(commons.AUDIO_UNIT_DIR)
+	# if not os.path.exists(commons.AUDIO_UNIT_DONE_DIR):
+	# 	os.mkdir(commons.AUDIO_UNIT_DONE_DIR)
+
+	labelof = commons.get_label()
+	train_ids, test_ids = commons.get_train_and_test_imbd_ids()
+	train_x, train_y, test_x, test_y, test_who = [], [], [], [], []
+
+	if not os.path.exists(commons.AUDIO_BASELINE_DIR):
+		os.mkdir(commons.AUDIO_BASELINE_DIR)
+
+	#for imdb_id in movies:
+	for imdb_id in ['tt0264464', 'tt1843866', 'tt3501632']:
+		temp_audio_unit_path = os.path.join(commons.AUDIO_UNIT_DIR, imdb_id)
+
+		# 0. clean up work if exists
+		if os.path.exists(os.path.join(commons.AUDIO_UNIT_DONE_DIR, imdb_id)):
+			print("<{}> already completed.".format(imdb_id))
+			return
+		if os.path.exists(os.path.join(commons.AUDIO_UNIT_DIR, imdb_id)):
+			shutil.rmtree(temp_audio_unit_path)
+
+		# 1. create temp path and start working!
+		os.mkdir(temp_audio_unit_path)
+		frames = [ x for x in os.listdir(commons.TRAIN_IMAGES_DIR) if x.startswith(imdb_id) ]
+
+		timestampsof = defaultdict(list) # character_id -> timestamps
+		for frame in frames:
+			_, character_id, timestamp = frame[:-4].split('-')
+			character_id = int(character_id)
+			timestamp = float(timestamp)
+			timestampsof[character_id].append(timestamp)
+		for character_id in timestampsof:
+			timestampsof[character_id].sort()
+
+		scenes = defaultdict(list) # character_id -> [ scene0 = [ timestamp0 ... ] ]
+								   # timestamp is a float exactly what in train_image, in milisecond
+		curr_scene = []
+		for character_id in timestampsof:
+			for timestamp in timestampsof[character_id]:
+				if not is_the_same_scene(curr_scene, timestamp):
+					scenes[character_id].append(curr_scene)
+					curr_scene = []
+				curr_scene.append(timestamp)
+
+			scenes[character_id].append(curr_scene)
+			curr_scene = []
+
+		for character_id in scenes:
+			scenes[character_id] = filter_scene(scenes[character_id])
+
+		# 2. from character_id -> a list of scene [timestamps], 
+		# 	 extract audio file and save to train/test 
+		# 	 NOTE: we need to write because we don't know how to convert scipy wavfile to
+		# 		   format known to pyAudioAnalysis
+		partial_xs = []
+		rate, data = wavfile.read(os.path.join(commons.AUDIO_DIR, "{}.wav".format(imdb_id)))
+		for c_id in scenes:
+			for scene in scenes[c_id]:
+				# clip audio of this scene
+				start, end = scene[0], scene[-1]
+				start_sec, end_sec = start / 1000, end / 1000 # convert to seconds
+				start_frame, end_frame = int(start_sec * rate), int(end_sec * rate)
+				x = data[start_frame: end_frame + 1]
+
+				# get audio features of this scene
+				from pyAudioAnalysis import audioFeatureExtraction
+
+				x = x.sum(axis=1) / 2 # stereo to mono
+				features, _ = audioFeatureExtraction.stFeatureExtraction(x, rate, 
+																		0.05*rate, #frame size
+												   0.025*(end_frame+1-start_frame)) #frame step
+				features = features[:, :39] # drop extra frame data ... sign
+				features.flatten()
+				
+				# add (x, y) 
+				label = labelof[imdb_id][c_id]
+				if imdb_id in train_ids:
+					train_x.append(features)
+					train_y.append(label)
+				else:
+					test_x.append(features)
+					test_y.append(label)
+					test_who.append("{}-{}-{}~{}".format(imdb_id, c_id, start, end))				
+
+		print("<{}> Finished".format(imdb_id))
+
+	with open(commons.AUDIO_BASELINE_TRAIN_X, 'wb') as f:
+		pickle.dump(train_x, f)
+	with open(commons.AUDIO_BASELINE_TRAIN_Y, 'wb') as f:
+		pickle.dump(train_y, f)
+	with open(commons.AUDIO_BASELINE_TEST_X, 'wb') as f:
+		pickle.dump(test_x, f)
+	with open(commons.AUDIO_BASELINE_TEST_Y, 'wb') as f:
+		pickle.dump(test_y, f)
+	with open(commons.AUDIO_BASELINE_TEST_WHO, 'w') as f:
+		for who in test_who:
+			f.write(who + '\n')
 
 if __name__ == "__main__":
 	#generate_train_and_test()
 	#prepare_images()
-	extract_audio_from_video()
+	#extract_audio_from_video()
+	generate_audio_features()

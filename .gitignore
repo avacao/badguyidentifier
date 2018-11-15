@@ -5,6 +5,7 @@ venv
 _DONE/
 baseline/
 data/features/
+codes/pyAudioAnalysis/
 
 *.pyc
 *.avi

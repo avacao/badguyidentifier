@@ -17,6 +17,9 @@ IMAGE_DONE_DIR = IMAGE_DIR + '_DONE/'
 TRAIN_IMAGES_DIR = DATA_DIR + "train_images/"
 TRAIN_IMAGES_DONE_DIR = TRAIN_IMAGES_DIR + '_DONE/'
 
+AUDIO_UNIT_DIR = DATA_DIR + 'audio_units/'
+AUDIO_UNIT_DONE_DIR = AUDIO_UNIT_DIR + '_DONE/'
+
 TRAIN_FILE = DATA_DIR + "train.txt"
 TEST_FILE = DATA_DIR + "test.txt"
 
@@ -28,7 +31,15 @@ BASELINE_TEST_X = BASELINE_DIR + 'test_x.pickle'
 BASELINE_TEST_Y = BASELINE_DIR + 'test_y.pickle'
 BASELINE_TEST_WHO = BASELINE_DIR + 'test_who.txt'
 
-FEATURES_DIR = os.path.join(DATA_DIR, "features")
+FEATURES_DIR = os.path.join(DATA_DIR, "features/")
+
+AUDIO_BASELINE_DIR = FEATURES_DIR + 'audio_baseline/'
+AUDIO_BASELINE_MODEL = AUDIO_BASELINE_DIR + 'model.joblib'
+AUDIO_BASELINE_TRAIN_X = AUDIO_BASELINE_DIR + 'train_x.pickle'
+AUDIO_BASELINE_TRAIN_Y = AUDIO_BASELINE_DIR + 'train_y.pickle'
+AUDIO_BASELINE_TEST_X = AUDIO_BASELINE_DIR + 'test_x.pickle'
+AUDIO_BASELINE_TEST_Y = AUDIO_BASELINE_DIR + 'test_y.pickle'
+AUDIO_BASELINE_TEST_WHO = AUDIO_BASELINE_DIR + 'test_who.txt'
 
 """
 Returns: dictionary {imdb_id -> movie object}
@@ -148,3 +159,16 @@ def get_label():
 				break
 
 	return labelof
+
+def get_train_and_test_imbd_ids():
+	train_ids = set([])
+	with open(TRAIN_FILE, 'r') as f:
+		for line in f.readlines():
+			train_ids.add(line.strip())
+
+	test_ids = set([])
+	with open(TEST_FILE, 'r') as f:
+		for line in f.readlines():
+			test_ids.add(line.strip())
+
+	return train_ids, test_ids
