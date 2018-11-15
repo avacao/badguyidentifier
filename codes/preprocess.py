@@ -236,13 +236,14 @@ def generate_audio_features():
 
 				if len(x.shape) > 1 and x.shape[1] == 2: # stereo to mono
 				    x = x.sum(axis=1) / 2 
-				try:
-					features, _ = audioFeatureExtraction.stFeatureExtraction(x, rate, 
-																			0.05*rate, #frame size
-													   0.025*(end_frame+1-start_frame)) #frame step
-				except Exception as e: # nothing in this audio
-					features = numpy.zeros((34, 38)) 
-					print("Catched error: <{}> has zero features.".format(imdb_id))
+				features, _ = audioFeatureExtraction.stFeatureExtraction(x, rate, 
+																		0.05*rate, #frame size
+												   0.025*(end_frame+1-start_frame)) #frame step
+
+				# catch edge case: nothing in audio
+				if not numpy.isfinite(features).all():
+					features = numpy.nan_to_num(features)
+					print("Catched error: <{}> has nothing in audio.".format(imdb_id))
 				features = features[:, :38] # drop extra frame data ... sign
 				
 				# add (x, y) 
