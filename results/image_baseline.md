@@ -6,6 +6,7 @@
 | 61/278 | 4 |VGG16 on imagenet | linear | balanced | 100 |- | weighted | 0.805 | 0.323 | BAD accuracy: 0.087 |
 | 61/278 | 4 |VGG16 face | linear | balanced | 150 |- | weighted | 0.563 | 0.352 | INDEX_4 |
 | 99/278 | 4 | VGG16 face | linear | balanced | 125 |- | weighted | 0.647 | 0.350 | INDEX_5 |
+| 123/278 | 4 | VGG16 Face | linear | balanced | 75 | - | weighted | 0.596 | 0.404 | INDEX_6|
 
 
 INDEX_1
@@ -152,4 +153,34 @@ accuracy by actor type 0: 56/57
 accuracy by actor type 1: 0/7
 accuracy by actor type 2: 0/36
 accuracy by actor type 3: 4/40
+```
+
+INDEX_6
+
+```
+Naive accuracy 7930/13210
+Naive accuracy type 0 6645/8909
+Naive accuracy type 1 369/1084
+Naive accuracy type 2 475/2009
+Naive accuracy type 3 441/1208
+
+f1-score: 0.5955322768434901
+
+Model saved.
+
+==============================
+Test accuracy:
+Naive accuracy 1860/4194
+Naive accuracy type 0 1586/2171
+Naive accuracy type 1 41/334
+Naive accuracy type 2 156/1071
+Naive accuracy type 3 77/618
+
+f1-score: 0.403943558796438
+
+accuracy by actor: 87/174
+accuracy by actor type 0: 84/85
+accuracy by actor type 1: 1/9
+accuracy by actor type 2: 0/37
+accuracy by actor type 3: 2/43
 ```
