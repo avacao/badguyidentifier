@@ -26,22 +26,18 @@ TIERS = {'EASY', 'MEDIUM', 'HARD'}
 LABEL_IDS = {1, 2, 3}
 
 def get_movie_folders():
-	imdb_ids = [name for name in sorted(os.listdir(FACE_DIR))
-			if os.path.isdir(os.path.join(FACE_DIR, name)) and name.startswith(IMDB_ID_PREFIX) and
-				os.path.exists(os.path.join(FACE_DIR, name, SUCCESS_FILE)) ]
+	imdb_ids = [imdb_id for imdb_id in os.listdir(FACE_DIR)
+			if os.path.isdir(os.path.join(FACE_DIR, imdb_id)) and imdb_id.startswith(IMDB_ID_PREFIX) and
+				os.path.exists(os.path.join(FACE_DIR, imdb_id, SUCCESS_FILE)) and
+				not os.path.exists(os.path.join(FACE_DIR, imdb_id, LABEL_FILE))]
 
-	unlabeled = [] # not yet labeled by anyone
-	unlabeled_by_me = [] # labeled by someone but not me
 	label_files = ['_LABEL{}'.format(x) for x in LABEL_IDS]
 
-	for imdb_id in imdb_ids:
-		if not os.path.exists(os.path.join(FACE_DIR, imdb_id, LABEL_FILE)):
-			if max([ os.path.exists(os.path.join(FACE_DIR, imdb_id, f)) for f in label_files ]) == 1:
-				unlabeled_by_me.append(imdb_id)
-			else:
-				unlabeled.append(imdb_id)
-
-	unlabeled.extend(unlabeled_by_me)
+    # Sort so that movies with less labels come first.
+	unlabeled = sorted(imdb_ids, 
+		key = lambda imdb_id : len(list(filter(lambda label_file : 
+			os.path.exists(os.path.join(FACE_DIR, imdb_id, label_file)), label_files))))
+	
 	return unlabeled
 
 def tag(movie):
@@ -56,7 +52,7 @@ def tag(movie):
 	
 	for idx in range(len(faces)):
 		print('Showing pics for character {} ...'.format(idx))
-		show_character(faces[idx])
+		show_character(faces[idx], idx)
 
 		while True:
 			label = ask_for_label()
@@ -92,7 +88,7 @@ def write_to_label(movie, labels):
 """
 INPUT: a list of image filenames of this character
 """
-def show_character(faces):
+def show_character(faces, idx):
 	num_samples = min(20, int(len(faces) / 5) * 5)
 	sampled_faces = random.sample(faces, num_samples) # filenames
 	sampled_faces = [ Image.open(face).resize((168, 168)) for face in sampled_faces ]
@@ -104,23 +100,21 @@ def show_character(faces):
 	matrix = numpy.concatenate(rows, axis=0)
 
 	img = Image.fromarray(matrix)
-	img.show()
-
-def show_pic(pic):
-	webbrowser.open('file://' + os.path.abspath(pic))
+	# Somehow not working
+	img.show(title="character"+str(idx))
 
 def ask_for_label():
 	print(OPTION_FORMAT.format(1, 'G', 'GOOD'))
 	print(OPTION_FORMAT.format(2, 'B', 'BAD'))
 	print(OPTION_FORMAT.format(3, 'N', 'Neutral'))
 	print(OPTION_FORMAT.format(4, 'NA', 'NOT APPLICABLE'))
-
+	print("'SAMEAS{number}' for 'SAME CHARACTER AS {number}'")
 	# Loop to handle selections. Typing legal input to break out.
 	while True:
 		selection = input('Type your selection, or hit Enter to view next pic for this character:')
 
 		# Handle unknown input.
-		if selection not in LEGAL_SELECTION:
+		if selection not in LEGAL_SELECTION and not selection.startswith("SAMEAS"):
 			print('\nERROR: illegal input.\n')
 			continue
 
@@ -136,6 +130,9 @@ def ask_for_label():
 		
 		if selection == '4' or selection == 'NA':
 			return 'NA'
+
+		if selection.startswith('SAMEAS') and selection[6:].isdigit():
+			return selection
 
 		return ''
 
