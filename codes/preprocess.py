@@ -171,12 +171,14 @@ def generate_audio_features():
 
 	labelof = commons.get_label()
 	train_ids, test_ids = commons.get_train_and_test_imbd_ids()
-	train_x, train_y, test_x, test_y, test_who = [], [], [], [], []
+	train_x, train_y, train_who, test_x, test_y, test_who = [], [], [], [], [], []
 
 	if not os.path.exists(commons.AUDIO_BASELINE_DIR):
 		os.mkdir(commons.AUDIO_BASELINE_DIR)
+	all_scenes = {} # imdb_id -> scenes
 
-	for imdb_id in movies:
+	for imdb_id in ['tt0264464', 'tt1843866', 'tt3501632']:
+	#for imdb_id in movies:
 		if imdb_id not in labelof:
 		    continue
 		temp_audio_unit_path = os.path.join(commons.AUDIO_UNIT_DIR, imdb_id)
@@ -216,6 +218,7 @@ def generate_audio_features():
 
 		for character_id in scenes:
 			scenes[character_id] = filter_scene(scenes[character_id])
+		all_scenes[imdb_id] = scenes
 
 		# 2. from character_id -> a list of scene [timestamps], 
 		#        extract audio file and save to train/test 
@@ -251,6 +254,7 @@ def generate_audio_features():
 				if imdb_id in train_ids:
 					train_x.append(features)
 					train_y.append(label)
+					train_who.append("{}-{}-{}-{}".format(imdb_id, c_id, start, end))
 				else:
 					test_x.append(features)
 					test_y.append(label)
@@ -262,6 +266,10 @@ def generate_audio_features():
 		pickle.dump(train_x, f)
 	with open(commons.AUDIO_BASELINE_TRAIN_Y, 'wb') as f:
 		pickle.dump(train_y, f)
+	with open(commons.AUDIO_BASELINE_TRAIN_WHO, 'w') as f:
+		for who in train_who:
+			f.write(who + '\n')
+
 	with open(commons.AUDIO_BASELINE_TEST_X, 'wb') as f:
 		pickle.dump(test_x, f)
 	with open(commons.AUDIO_BASELINE_TEST_Y, 'wb') as f:
@@ -269,6 +277,10 @@ def generate_audio_features():
 	with open(commons.AUDIO_BASELINE_TEST_WHO, 'w') as f:
 		for who in test_who:
 			f.write(who + '\n')
+
+	with open(commons.SCENES, 'wb') as f:
+		pickle.dump(all_scenes, f)
+
 
 if __name__ == "__main__":
 	#generate_train_and_test()

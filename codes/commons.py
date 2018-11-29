@@ -37,9 +37,12 @@ AUDIO_BASELINE_DIR = FEATURES_DIR + 'audio_baseline/'
 AUDIO_BASELINE_MODEL = AUDIO_BASELINE_DIR + 'model.joblib'
 AUDIO_BASELINE_TRAIN_X = AUDIO_BASELINE_DIR + 'train_x.pickle'
 AUDIO_BASELINE_TRAIN_Y = AUDIO_BASELINE_DIR + 'train_y.pickle'
+AUDIO_BASELINE_TRAIN_WHO = AUDIO_BASELINE_DIR + 'train_who.txt'
 AUDIO_BASELINE_TEST_X = AUDIO_BASELINE_DIR + 'test_x.pickle'
 AUDIO_BASELINE_TEST_Y = AUDIO_BASELINE_DIR + 'test_y.pickle'
 AUDIO_BASELINE_TEST_WHO = AUDIO_BASELINE_DIR + 'test_who.txt'
+
+SCENES = os.path.join(FEATURES_DIR, 'scenes.pickle')
 
 """
 Returns: dictionary {imdb_id -> movie object}
@@ -172,3 +175,11 @@ def get_train_and_test_imbd_ids():
 			test_ids.add(line.strip())
 
 	return train_ids, test_ids
+
+def get_scenes():
+	if not os.path.exists(SCENES):
+		raise RuntimeError("scenes.pickle does not exist")
+
+	with open(SCENES, 'rb') as f:
+		scenes = pickle.load(f)
+	return scenes
