@@ -9,7 +9,11 @@ def load_training_data():
 		train_x = pickle.load(f)
 	with open(commons.AUDIO_BASELINE_TRAIN_Y, 'rb') as f:
 		train_y = pickle.load(f)
-	return (train_x, train_y)
+	with open(commons.AUDIO_BASELINE_TRAIN_WHO, 'r') as f:
+		train_who = []
+		for line in f.readlines():
+			train_who.append(line.strip())	
+	return (train_x, train_y, train_who)
 
 def load_test_data():
 	with open(commons.AUDIO_BASELINE_TEST_X, 'rb') as f:

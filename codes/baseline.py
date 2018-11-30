@@ -175,7 +175,7 @@ def train(data=None, model_path=commons.BASELINE_MODEL):
 	if data is None:
 		train_x, train_y = load_training_data()
 	else:
-		train_x, train_y = data
+		train_x, train_y, train_who = data
 
 	train_x, train_y = transform_x_y(train_x, train_y)
 	train_x, train_y = shuffle_train(train_x, train_y)
