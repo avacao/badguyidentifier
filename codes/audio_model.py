@@ -13,6 +13,9 @@ def load_training_data():
 		train_who = []
 		for line in f.readlines():
 			train_who.append(line.strip())	
+
+	transform_to_mean_std(train_x)
+
 	return (train_x, train_y, train_who)
 
 def load_test_data():
@@ -24,7 +27,16 @@ def load_test_data():
 		test_who = []
 		for line in f.readlines():
 			test_who.append(line.strip())
+
+	transform_to_mean_std(test_x)
+	
 	return (test_x, test_y, test_who)
+
+def transform_to_mean_std(xs):
+	for i in range(len(xs)):
+		mean = xs[i].mean(axis=1)
+		std = xs[i].std(axis=1)
+		xs[i] = numpy.concatenate((mean, std))
 
 if __name__ == '__main__':
 	baseline.train(data=load_training_data(), model_path=commons.AUDIO_BASELINE_MODEL)
