@@ -12,5 +12,6 @@ codes/pyAudioAnalysis/
 *.mp4 
 *.jpg
 *.wav
+.DS_Store
 
 !/.gitignore
