@@ -26,54 +26,38 @@ VGG19_ILSVRC_WEIGHT_PATH = "./weights/VGG19_ILSVRC_keras_weights.h5"
 
 def VGG_19(weights_path=VGG19_ILSVRC_WEIGHT_PATH):
     model = Sequential()
-    model.add(ZeroPadding2D((1,1),input_shape=(3,224,224)))
-    model.add(Convolution2D(64, 3, 3, activation='relu'))
-    model.add(ZeroPadding2D((1,1)))
-    model.add(Convolution2D(64, 3, 3, activation='relu'))
-    model.add(MaxPooling2D((2,2), strides=(2,2)))
+    model.add(ZeroPadding2D((1,1), input_shape=(224,224,3)))
 
-    model.add(ZeroPadding2D((1,1)))
-    model.add(Convolution2D(128, 3, 3, activation='relu'))
-    model.add(ZeroPadding2D((1,1)))
-    model.add(Convolution2D(128, 3, 3, activation='relu'))
-    model.add(MaxPooling2D((2,2), strides=(2,2)))
+    model.add(keras.layers.Conv2D(64, (3,3), activation='relu', padding='same', name='block1_conv1'))
+    model.add(keras.layers.Conv2D(64, (3,3), activation='relu', padding='same', name='block1_conv2'))
+    model.add(MaxPooling2D((2,2), strides=(2,2), name='block1_pool'))
 
-    model.add(ZeroPadding2D((1,1)))
-    model.add(Convolution2D(256, 3, 3, activation='relu'))
-    model.add(ZeroPadding2D((1,1)))
-    model.add(Convolution2D(256, 3, 3, activation='relu'))
-    model.add(ZeroPadding2D((1,1)))
-    model.add(Convolution2D(256, 3, 3, activation='relu'))
-    model.add(ZeroPadding2D((1,1)))
-    model.add(Convolution2D(256, 3, 3, activation='relu'))
-    model.add(MaxPooling2D((2,2), strides=(2,2)))
+    model.add(keras.layers.Conv2D(128, (3,3), activation='relu', padding='same', name='block2_conv1'))
+    model.add(keras.layers.Conv2D(128, (3,3), activation='relu', padding='same', name='block2_conv2'))
+    model.add(MaxPooling2D((2,2), strides=(2,2), name='block2_pool'))
 
-    model.add(ZeroPadding2D((1,1)))
-    model.add(Convolution2D(512, 3, 3, activation='relu'))
-    model.add(ZeroPadding2D((1,1)))
-    model.add(Convolution2D(512, 3, 3, activation='relu'))
-    model.add(ZeroPadding2D((1,1)))
-    model.add(Convolution2D(512, 3, 3, activation='relu'))
-    model.add(ZeroPadding2D((1,1)))
-    model.add(Convolution2D(512, 3, 3, activation='relu'))
-    model.add(MaxPooling2D((2,2), strides=(2,2)))
+    model.add(keras.layers.Conv2D(256, (3,3), activation='relu', padding='same', name='block3_conv1'))
+    model.add(keras.layers.Conv2D(256, (3,3), activation='relu', padding='same', name='block3_conv2'))
+    model.add(keras.layers.Conv2D(256, (3,3), activation='relu', padding='same', name='block3_conv3'))
+    model.add(keras.layers.Conv2D(256, (3,3), activation='relu', padding='same', name='block3_conv4'))
+    model.add(MaxPooling2D((2,2), strides=(2,2), name='block3_pool'))
 
-    model.add(ZeroPadding2D((1,1)))
-    model.add(Convolution2D(512, 3, 3, activation='relu'))
-    model.add(ZeroPadding2D((1,1)))
-    model.add(Convolution2D(512, 3, 3, activation='relu'))
-    model.add(ZeroPadding2D((1,1)))
-    model.add(Convolution2D(512, 3, 3, activation='relu'))
-    model.add(ZeroPadding2D((1,1)))
-    model.add(Convolution2D(512, 3, 3, activation='relu'))
-    model.add(MaxPooling2D((2,2), strides=(2,2)))
+    model.add(keras.layers.Conv2D(512, (3,3), activation='relu', padding='same', name='block4_conv1'))
+    model.add(keras.layers.Conv2D(512, (3,3), activation='relu', padding='same', name='block4_conv2'))
+    model.add(keras.layers.Conv2D(512, (3,3), activation='relu', padding='same', name='block4_conv3'))
+    model.add(keras.layers.Conv2D(512, (3,3), activation='relu', padding='same', name='block4_conv4'))
+    model.add(MaxPooling2D((2,2), strides=(2,2), name='block4_pool'))
 
-    model.add(Flatten())
-    model.add(Dense(4096, activation='relu'))
-    model.add(Dropout(0.5))
-    model.add(Dense(4096, activation='relu'))
-    model.add(Dropout(0.5))
-    model.add(Dense(1000, activation='softmax'))
+    model.add(keras.layers.Conv2D(512, (3,3), activation='relu', padding='same', name='block5_conv1'))
+    model.add(keras.layers.Conv2D(512, (3,3), activation='relu', padding='same', name='block5_conv2'))
+    model.add(keras.layers.Conv2D(512, (3,3), activation='relu', padding='same', name='block5_conv3'))
+    model.add(keras.layers.Conv2D(512, (3,3), activation='relu', padding='same', name='block5_conv4'))
+    model.add(MaxPooling2D((2,2), strides=(2,2), name='block5_pool'))
+
+    model.add(keras.layers.Flatten(name='flatten'))
+    model.add(Dense(4096, activation='relu', name='fc1'))
+    model.add(Dense(4096, activation='relu', name='fc2'))
+    model.add(Dense(1000, activation='softmax', name='prediction'))
 
     if weights_path:
         model.load_weights(weights_path)
@@ -105,13 +89,13 @@ def generate_vggface_data():
     with open(commons.TRAIN_FILE, 'r') as f:
         for line in f.readlines():
             train_ids.add(line.strip())
-    train_ids = set(random.sample(train_ids, 80))
+    # train_ids = set(random.sample(train_ids, 80))
 
     test_ids = set([])
     with open(commons.TEST_FILE, 'r') as f:
         for line in f.readlines():
             test_ids.add(line.strip())
-    test_ids = set(random.sample(test_ids, 20))
+    # test_ids = set(random.sample(test_ids, 20))
 
     # encoding and separate (data, label)
     train_x, train_y, train_who, test_x, test_y, test_who = [], [], [], [], [], []
