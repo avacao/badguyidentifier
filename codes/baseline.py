@@ -174,6 +174,7 @@ Y: GOOD = 0, BAD = 1
 def train(data=None, model_path=commons.BASELINE_MODEL):
 	if data is None:
 		train_x, train_y = load_training_data()
+		train_who = []
 	else:
 		train_x, train_y, train_who = data
 
