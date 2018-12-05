@@ -6,7 +6,7 @@ from keras.models import Sequential
 from keras.layers.core import Flatten, Dense, Dropout
 from keras.layers.convolutional import Convolution2D, MaxPooling2D, ZeroPadding2D
 from keras.optimizers import SGD
-import cv2, numpy 
+import cv2, numpy, pickle
 from keras.applications import vgg19
 
 import os, commons, baseline, random
@@ -89,13 +89,13 @@ def generate_vggface_data():
     with open(commons.TRAIN_FILE, 'r') as f:
         for line in f.readlines():
             train_ids.add(line.strip())
-    # train_ids = set(random.sample(train_ids, 80))
+    train_ids = set(random.sample(train_ids, 80))
 
     test_ids = set([])
     with open(commons.TEST_FILE, 'r') as f:
         for line in f.readlines():
             test_ids.add(line.strip())
-    # test_ids = set(random.sample(test_ids, 20))
+    test_ids = set(random.sample(test_ids, 20))
 
     # encoding and separate (data, label)
     train_x, train_y, train_who, test_x, test_y, test_who = [], [], [], [], [], []
@@ -143,7 +143,6 @@ def generate_vggface_data():
         x = vgg19.preprocess_input(x)
         x = cnn_model.predict(x)
         
-        print("shape x:", x.shape)
         y = labelof[imdb_id][character_id]
 
         if imdb_id in train_ids:
