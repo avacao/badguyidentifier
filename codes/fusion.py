@@ -132,14 +132,5 @@ def generate_fusion_data():
 
 if __name__ == '__main__':
 	train_data, test_data = generate_fusion_data()
-
-	# only train a subset
-	selected_train = random.sample(len(train_data[0]), 40)
-	selected_test = random.sample(len(test_data[0]), 10)
-	for i in range(len(train_data)):
-		train_data[i] = [train_data[i][x] for x in selected_train]
-	for i in range(len(test_data)):
-		test_data[i] = [test_data[i][x] for x in selected_test]
-
 	baseline.train(data=train_data, model_path=FUSION_MODEL)
 	baseline.test(data=test_data, model_path=FUSION_MODEL)

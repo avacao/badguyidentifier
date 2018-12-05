@@ -114,7 +114,7 @@ def generate_scene_data():
     labelof = commons.get_label()
 
     IMAGE_SIZE = 224
-    vgg_model = VGG_19()
+    cnn_model = VGG_19()
 
     print("Loading scene data...", datetime.now())
 
