@@ -1,7 +1,7 @@
 import sklearn, keras, numpy, keras_vggface
 from keras_vggface.vggface import VGGFace
 import os, random, pickle
-import commons, audio_model, baseline
+import commons, audio_model, baseline, scene_model
 from datetime import datetime
 
 FUSION_DIR = os.path.join(commons.FEATURES_DIR, 'fusion')
@@ -51,6 +51,8 @@ def generate_fusion_data():
 
 	IMAGE_SIZE = 224
 	cnn_model = VGGFace(include_top=False, input_shape=(IMAGE_SIZE, IMAGE_SIZE, 3), pooling='None')
+	vgg19_model = scene_model.VGG_19()
+
 	print("Generating & merging features...", datetime.now())
 
 	for (xs, ys, whos) in [audio_train_data, audio_test_data]:
@@ -86,15 +88,20 @@ def generate_fusion_data():
 				image = keras.preprocessing.image.load_img(image_filename, 
 					target_size=(IMAGE_SIZE, IMAGE_SIZE))
 
+				# face features
 				x = keras.preprocessing.image.img_to_array(image)
 				x = numpy.expand_dims(x, axis=0)
 				x = keras_vggface.utils.preprocess_input(x, version=1)
 				x = cnn_model.predict(x)
-
+				x = x.flatten()
 				image_x.append(x)
 
-			image_x = numpy.asarray(image_x).flatten()
-			x = numpy.concatenate((image_x, audio_x))
+				# scene features
+				x = scene_model.extract_scene_feature(vgg19_model, image)
+				x = x.flatten()
+				image_x.append(x)
+
+			x = numpy.concatenate(tuple(image_x + [audio_x]))
 
 			if imdb_id in train_ids:
 				train_x.append(x)
@@ -102,7 +109,6 @@ def generate_fusion_data():
 			elif imdb_id in test_ids:
 				test_x.append(x)
 				test_y.append(y)
-
 
 	print("\rDone. ", datetime.now())
 
