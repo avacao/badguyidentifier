@@ -5,7 +5,6 @@ import keras
 from keras.models import Sequential
 from keras.layers.core import Flatten, Dense, Dropout
 from keras.layers.convolutional import Convolution2D, MaxPooling2D, ZeroPadding2D
-from keras.optimizers import SGD
 import cv2, numpy, pickle
 from keras.applications import vgg19
 
@@ -62,9 +61,24 @@ def VGG_19(weights_path=VGG19_ILSVRC_WEIGHT_PATH):
     if weights_path:
         model.load_weights(weights_path)
 
-    return model
+    return keras.models.Model(inputs=model.input, outputs=model.get_layer('fc2').output)
 
-def generate_vggface_data():
+def extract_scene_feature(model, image):
+    # image comes from keras.preprocessing.image.load_img
+    x = keras.preprocessing.image.img_to_array(image)
+    
+    # VGG19 requires input to be zero-centered by mean pixel
+    x[:,:,0] -= 103.939
+    x[:,:,1] -= 116.779
+    x[:,:,2] -= 123.68
+
+    x = numpy.expand_dims(x, axis=0)
+    x = vgg19.preprocess_input(x)
+    x = model.predict(x)
+
+    return x
+
+def generate_scene_data():
     if not os.path.exists(commons.FEATURES_DIR):
         os.mkdir(commons.FEATURES_DIR)
 
@@ -89,13 +103,11 @@ def generate_vggface_data():
     with open(commons.TRAIN_FILE, 'r') as f:
         for line in f.readlines():
             train_ids.add(line.strip())
-    train_ids = set(random.sample(train_ids, 80))
 
     test_ids = set([])
     with open(commons.TEST_FILE, 'r') as f:
         for line in f.readlines():
             test_ids.add(line.strip())
-    test_ids = set(random.sample(test_ids, 20))
 
     # encoding and separate (data, label)
     train_x, train_y, train_who, test_x, test_y, test_who = [], [], [], [], [], []
@@ -103,13 +115,6 @@ def generate_vggface_data():
 
     IMAGE_SIZE = 224
     vgg_model = VGG_19()
-    
-    # cnn_model = vgg19.VGG19(weights=VGG19_ILSVRC_WEIGHT_PATH, include_top=False)
-
-    # vgg_model = vgg19.VGG19(weights=VGG19_ILSVRC_WEIGHT_PATH, input_shape=(IMAGE_SIZE, IMAGE_SIZE, 3))
-    print(vgg_model.summary())
-    cnn_model = keras.models.Model(inputs=vgg_model.input, outputs=vgg_model.get_layer('fc2').output)
-    print(cnn_model.summary())
 
     print("Loading scene data...", datetime.now())
 
@@ -172,7 +177,7 @@ def generate_vggface_data():
             f.write("{}\n".format(who))
 
 def load_training_data():
-    generate_vggface_data()
+    generate_scene_data()
     with open(SCENE_DIR + '/' + TRAIN_X, 'rb') as f:
         train_x = pickle.load(f)
     with open(SCENE_DIR + '/' + TRAIN_Y, 'rb') as f:
@@ -184,7 +189,7 @@ def load_training_data():
     return (train_x, train_y, train_who)
 
 def load_test_data():
-    generate_vggface_data()
+    generate_scene_data()
     with open(SCENE_DIR + '/' + TEST_X, 'rb') as f:
         test_x = pickle.load(f)
     with open(SCENE_DIR + '/' + TEST_Y, 'rb') as f:
