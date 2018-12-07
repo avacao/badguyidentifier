@@ -194,6 +194,17 @@ def train(data=None, model_path=commons.BASELINE_MODEL):
 	joblib.dump(svm, model_path) 
 	print("Model saved.")
 
+def save_right_wrong_whos(result, test_y, test_who):
+	assert(len(result) == len(test_y) and len(test_y) == len(test_who))
+	right_file = open(os.path.join(commons.DATA_DIR, 'right_ones.txt'), 'w')
+	wrong_file = open(os.path.join(commons.DATA_DIR, 'wrong_ones.txt'), 'w')
+
+	for i in range(len(result)):
+		if result[i] == test_y[i]:
+			right_file.write("{} {}\n".format(test_who[i], test_y[i]))
+		else:
+			wrong_file.write("{} {} {}\n".format(test_who[i], test_y[i], result[i]))
+
 def test(data=None, model_path=commons.BASELINE_MODEL):
 	from sklearn.externals import joblib
 	svm = joblib.load(model_path) 
@@ -245,6 +256,8 @@ def test(data=None, model_path=commons.BASELINE_MODEL):
 	print("accuracy by actor: {}/{}".format(correct, count))
 	for i in DIGITS:
 		print("accuracy by actor type {}: {}/{}".format(i, correct_by_type[i], count_by_type[i]))
+
+	save_right_wrong_whos(result, test_y, test_who)
 
 if __name__ == '__main__':
 	train()
