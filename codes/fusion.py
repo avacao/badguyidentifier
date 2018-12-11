@@ -132,5 +132,21 @@ def generate_fusion_data():
 
 if __name__ == '__main__':
 	train_data, test_data = generate_fusion_data()
+
+	# exclude N, N/A from data
+	print("before, len train, test:", len(train_data[0]), len(test_data[0]))
+	for i in range(len(train_x) - 1, -1, -1):
+		if train_y[i] == "NA" or train_y[i] == 'N':
+			train_x.pop(i)
+			train_y.pop(i)
+			train_who.pop(i)
+
+	for i in range(len(train_x) - 1, -1, -1):
+		if train_y[i] == "NA" or train_y[i] == 'N':
+			train_x.pop(i)
+			train_y.pop(i)
+			train_who.pop(i)
+	print("after, len train, test:", len(train_data[0]), len(test_data[0]))
+
 	baseline.train(data=train_data, model_path=FUSION_MODEL)
 	baseline.test(data=test_data, model_path=FUSION_MODEL)
